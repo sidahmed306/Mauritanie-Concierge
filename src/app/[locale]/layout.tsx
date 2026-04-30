@@ -10,45 +10,37 @@ import { Footer } from '@/components/footer';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 
 const inter = Inter({ subsets: ['latin'] });
+
 export async function generateMetadata({
   params
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-
   const titles: Record<string, string> = {
     en: 'Mauritania Concierge | Premium VIP Assistance & Private Drivers',
     fr: 'Mauritania Concierge | Assistance VIP, Chauffeurs Privés',
     ar: 'كونسيرج موريتانيا | مساعدة كبار الشخصيات والسائقين الخاصين'
   };
-
+  const descriptions: Record<string, string> = {
+    en: 'Premium concierge service in Mauritania. VIP airport pickup, private drivers, hotel assistance in Nouakchott.',
+    fr: 'Le service de conciergerie premium en Mauritanie. Accueil aéroport VIP, chauffeurs privés à Nouakchott.',
+    ar: 'خدمات الكونسيرج المميزة في موريتانيا. استقبال المطار لكبار الشخصيات والسائقين الخاصين في نواكشوط.'
+  };
   return {
-    title: titles[locale] || titles.en,
+    title: titles[locale] || titles['en'],
+    description: descriptions[locale] || descriptions['en'],
+    keywords: ['Mauritania airport pickup', 'Mauritania concierge', 'Private driver Mauritania', 'Nouakchott airport transfer', 'Mauritania VIP services'],
     verification: {
       google: 'xzrS9yCqIBiis_ZCPf6H8NPelSfKIlInScRKEtzUoyg',
     },
-    // ... reste du code existant
+    openGraph: {
+      type: 'website',
+      locale,
+      url: 'https://mauritanieconcierge.com',
+      siteName: 'Mauritania Concierge',
+    }
   };
-}
-
-const descriptions: Record<string, string> = {
-  en: 'Premium concierge service in Mauritania. We provide VIP airport pickup, private drivers, hotel assistance, and business delegation support in Nouakchott.',
-  fr: 'Le service de conciergerie premium en Mauritanie. Accueil aéroport VIP, chauffeurs privés, assistance hôtelière et pour les délégations d\'affaires à Nouakchott.',
-  ar: 'خدمات الكونسيرج المميزة في موريتانيا. نوفر استقبال المطار لكبار الشخصيات، والسائقين الخاصين، والمساعدة الفندقية ودعم وفود الأعمال في نواكشوط.'
-};
-
-return {
-  title: titles[locale] || titles['en'],
-  description: descriptions[locale] || descriptions['en'],
-  keywords: ['Mauritania airport pickup', 'Mauritania concierge', 'Private driver Mauritania', 'Nouakchott airport transfer', 'Mauritania VIP services', 'Mauritania travel assistance'],
-  openGraph: {
-    type: 'website',
-    locale,
-    url: 'https://mauritaniaconcierge.com',
-    siteName: 'Mauritania Concierge',
-  }
-};
 }
 
 export function generateStaticParams() {
@@ -63,17 +55,12 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
-
   setRequestLocale(locale);
   const messages = await getMessages();
-
-  // Explicitly assign text direction for RTL languages (Arabic)
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
-
   return (
     <html lang={locale} dir={dir}>
       <body className={`${inter.className} min-h-screen flex flex-col bg-slate-50 text-slate-900`}>
