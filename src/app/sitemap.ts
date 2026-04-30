@@ -1,32 +1,18 @@
-import type { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mauritanieconcierge.com';
-  const locales = ['en', 'fr', 'ar'];
-  const baseRoutes = ['', '/services', '/tours', '/contact', '/about', '/faq', '/blog'];
-  
-  // Blog routes
-  const blogSlugs = [
-    '/blog/top-10-things-to-do-in-mauritania',
-    '/blog/complete-guide-chinguetti-unesco',
-    '/blog/visiting-richat-structure-guide',
-    '/blog/terjit-oasis-hidden-paradise',
-    '/blog/mauritania-travel-tips'
-  ];
+  const baseUrl = 'https://mauritanieconcierge.com'
+  const locales = ['en', 'fr', 'ar']
+  const pages = ['', '/services', '/tours', '/contact', '/about', '/faq']
 
-  const routes = [...baseRoutes, ...blogSlugs];
-  const entries: MetadataRoute.Sitemap = [];
+  const urls = locales.flatMap(locale =>
+    pages.map(page => ({
+      url: `${baseUrl}/${locale}${page}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: page === '' ? 1 : 0.8,
+    }))
+  )
 
-  locales.forEach((locale) => {
-    routes.forEach((route) => {
-      entries.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: route === '' ? 1 : 0.8,
-      });
-    });
-  });
-
-  return entries;
+  return urls
 }
