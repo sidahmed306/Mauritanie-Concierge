@@ -1,0 +1,302 @@
+{
+  "Index": {
+    "title": "Your Personal Concierge in Mauritania"
+  },
+  "Navbar": {
+    "home": "Home",
+    "services": "Services",
+    "tours": "Tours",
+    "about": "About Us",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "Footer": {
+    "description": "Premium concierge services in Mauritania. We provide airport pickup, private drivers, hotel assistance, and VIP services for foreigners, diplomats, and investors.",
+    "links": "Quick Links",
+    "contact": "Contact Us",
+    "rights": "All rights reserved. Mauritania Concierge.",
+    "email": "mauritanieconcierge@gmail.com",
+    "phone": "+222 38 07 54 50",
+    "location": "Nouakchott, Mauritania",
+    "tours": "Tours"
+  },
+  "Hero": {
+    "title": "Your Personal Concierge",
+    "titleBreak": "in Mauritania",
+    "subtitle": "Airport pickup, accommodation, private driver, translation, VIP assistance, and travel support.",
+    "contactBtn": "Contact on WhatsApp",
+    "exploreBtn": "Explore Services"
+  },
+  "ServicesOverview": {
+    "tag": "Our Services",
+    "title": "Discover Our Premium Assistance",
+    "viewAll": "View All Services",
+    "ctaText": "View Details"
+  },
+  "Services": {
+    "airport-pickup": {
+      "title": "Airport Pickup",
+      "shortDescription": "Premium airport transfer service with meet & greet and private transportation.",
+      "fullDescription": "Our VIP airport pickup ensures a smooth transition from Nouakchott International Airport. We provide meet & greet services, help with luggage, and secure private transportation in air-conditioned vehicles straight to your hotel.",
+      "benefits": [
+        "Meet & Greet",
+        "Luggage Assistance",
+        "Air-Conditioned Vehicle",
+        "Private Transportation",
+        "SIM Card Assistance",
+        "24/7 Availability"
+      ]
+    },
+    "private-driver": {
+      "title": "Private Driver",
+      "shortDescription": "Secure business transportation and city transport with professional daily chauffeurs.",
+      "fullDescription": "Navigate the city safely and comfortably with our private driver service. Ideal for business professionals and tourists needing secure, daily chauffeur services across Mauritania.",
+      "benefits": [
+        "Business Transportation",
+        "City Transport",
+        "Daily Chauffeur",
+        "Secure Travel",
+        "Comfortable Vehicles"
+      ]
+    },
+    "hotel-assistance": {
+      "title": "Hotel Assistance",
+      "shortDescription": "Assistance finding VIP and business accommodation perfectly suited to your needs.",
+      "fullDescription": "We help you discover the finest hotels and VIP accommodations in Mauritania. We manually locate apartments and business stays tailored to your security and luxury needs.",
+      "benefits": [
+        "Help Finding Hotels",
+        "VIP Apartments",
+        "Business Accommodation",
+        "Secure Areas"
+      ]
+    },
+    "translation": {
+      "title": "Translation Services",
+      "shortDescription": "Professional translation services for meetings and administrative tasks.",
+      "fullDescription": "Communication is key. We offer premium translation in English, French, and Arabic. We accompany you during meetings, administrative matters, and negotiations to ensure perfect understanding.",
+      "benefits": [
+        "Arabic/French/English",
+        "Meeting Assistance",
+        "Administrative Help",
+        "Local Guidance"
+      ]
+    },
+    "business-vip": {
+      "title": "VIP Delegation Assistance",
+      "shortDescription": "Full assistance and transportation coordination for companies and investors.",
+      "fullDescription": "Complete support tailored for VIPs, delegations, and NGOs. We handle transportation coordination, secure schedules, and deep business support to ensure your trip is a complete success.",
+      "benefits": [
+        "Full Assistance",
+        "Transportation Coordination",
+        "Scheduling Help",
+        "Business Support"
+      ]
+    },
+    "tourism": {
+      "title": "Tourism & Desert Tours",
+      "shortDescription": "Nouakchott tours and epic trips to Chinguetti and Banc d’Arguin.",
+      "fullDescription": "Explore the vast beauty of Mauritania. From the historic deserts of Chinguetti to the coastal beauty of Banc d’Arguin. We manually arrange bespoke tourism experiences.",
+      "benefits": [
+        "Nouakchott Tours",
+        "Desert Trips",
+        "Chinguetti Excursions",
+        "Banc d’Arguin"
+      ]
+    }
+  },
+  "ServiceDetail": {
+    "backToServices": "Back to Services",
+    "overviewTitle": "Service Overview",
+    "benefitsTitle": "Key Benefits",
+    "bookTitle": "Book This Service",
+    "bookSubtitle": "No online forms to fill out. Contact us directly on WhatsApp to coordinate the details and secure this service manually.",
+    "bookBtn": "Book on WhatsApp",
+    "replyTime": "We reply within 5 minutes"
+  },
+  "ServicesOverviewPage": {
+    "tag": "Our Expertise",
+    "title": "Comprehensive Concierge Services",
+    "subtitle": "We provide end-to-end luxury solutions for individuals, groups, and delegations inside Mauritania."
+  },
+  "About": {
+    "tag": "Our Story",
+    "title": "Elevating the Standard of Hospitality in Mauritania",
+    "p1": "Mauritania Concierge was founded on a simple principle: foreigners traveling to Mauritania deserve a premium, secure, and seamless experience. Whether you are an investor, a diplomat, a delegation, or a tourist, arriving in a new country can be challenging. We bridge that gap by offering world-class personal concierge services.",
+    "p2": "We take pride in our deep local roots combined with international standards of excellence. From VIP airport greetings to complex business coordination, our tailored approach ensures absolute comfort and peace of mind.",
+    "f1Title": "Absolute Security",
+    "f1Desc": "Your safety and privacy are our top priorities. We arrange secure transport and vetted accommodations.",
+    "f2Title": "Premium Excellence",
+    "f2Desc": "We deliver international standards of hospitality, ensuring every detail of your stay feels luxurious and refined.",
+    "f3Title": "Personalized Care",
+    "f3Desc": "Nothing is automated. We manually oversee every single service request to guarantee personalized VIP attention."
+  },
+  "Contact": {
+    "tag": "Get In Touch",
+    "pageTitle": "Contact Us",
+    "pageSubtitle": "We are here to assist you with all your needs in Mauritania. Reach out directly on WhatsApp or fill out the form below.",
+    "phoneTitle": "WhatsApp / Phone",
+    "emailTitle": "Email",
+    "locationTitle": "Location",
+    "hoursTitle": "Working Hours",
+    "hours1": "Mon - Fri:",
+    "hours1Val": "24/7 (WhatsApp)",
+    "hours2": "Sat - Sun:",
+    "hours2Val": "24/7 (WhatsApp)",
+    "hours3": "Airport Pickup:",
+    "hours3Val": "Always Open",
+    "title": "Request Assistance",
+    "success": "Thank you! Your request has been received. We will contact you on WhatsApp shortly.",
+    "error": "Oops! Something went wrong. Please try contacting us directly via WhatsApp.",
+    "fullName": "Full Name *",
+    "country": "Country *",
+    "whatsapp": "WhatsApp Number *",
+    "email": "Email Address",
+    "serviceNeeded": "Service Needed *",
+    "arrivalDate": "Arrival Date",
+    "message": "Message",
+    "submit": "Submit Request",
+    "sending": "Sending...",
+    "selectService": "Select a service..."
+  },
+  "FAQ": {
+    "tag": "Common Questions",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about traveling to Mauritania and our premium concierge services.",
+    "viewAll": "View All FAQs",
+    "pageTag": "Support Center",
+    "pageTitle": "Frequently Asked Questions",
+    "pageSubtitle": "We have compiled answers to the questions we commonly receive from foreigners arriving in Mauritania.",
+    "items": [
+      {
+        "question": "Is Mauritania safe for foreigners and investors?",
+        "answer": "Yes, Mauritania is safe, especially for business travelers and tourists. The capital Nouakchott is very secure. However, having a local concierge and private driver significantly enhances your comfort, security, and ease of navigation."
+      },
+      {
+        "question": "Do you provide airport pickup at Nouakchott International Airport?",
+        "answer": "Absolutely. Our VIP airport pickup service includes a meet & greet, help with luggage, and a private air-conditioned vehicle waiting to transfer you to your hotel."
+      },
+      {
+        "question": "Can you help business travelers and delegations?",
+        "answer": "Yes, we specialize in assisting NGOs, diplomats, and investors. We coordinate your transportation, manage schedules, and provide translation services for smooth business operations."
+      },
+      {
+        "question": "Do you speak English?",
+        "answer": "Yes, our team provides full assistance and translation services in English, French, and Arabic."
+      }
+    ]
+  },
+  "Testimonials": {
+    "tag": "Testimonials",
+    "title": "Trusted by International Delegations",
+    "subtitle": "Read what our clients have to say about their experience with our premium concierge services in Mauritania.",
+    "items": [
+      {
+        "name": "Jean-Pierre Laurent",
+        "country": "France",
+        "review": "The airport pickup and VIP assistance provided a seamless experience for our entire delegation. Highly professional and deeply trustworthy."
+      },
+      {
+        "name": "Ahmed Al-Mansoori",
+        "country": "UAE",
+        "review": "Excellent service from start to finish. The private driver was punctual and the translation services made our business meetings highly successful."
+      },
+      {
+        "name": "Sarah Jenkins",
+        "country": "United States",
+        "review": "As an investor visiting Mauritania for the first time, Mauritania Concierge made everything incredibly easy and secure. The hotel assistance was top tier."
+      }
+    ]
+  },
+  "Tours": {
+    "pageTitle": "Discover the Magic of Mauritania",
+    "pageSubtitle": "Expertly crafted itineraries for unforgettable journeys",
+    "includedTitle": "What's Included in Every Tour",
+    "notIncludedTitle": "Not Included",
+    "bookWhatsApp": "Book on WhatsApp",
+    "viewDetails": "View Details",
+    "mostPopular": "MOST POPULAR",
+    "priceFrom": "From {price} per person",
+    "whatsAppPrefix": "Hello, I am interested in booking the {tour} {duration} tour. Please send me more information.",
+    "included": [
+      "Airport pickup and drop-off",
+      "All transportation in 4x4 vehicles",
+      "Accommodation (hotel or desert camp)",
+      "English/French/Arabic speaking guide",
+      "All meals mentioned in itinerary",
+      "Water and snacks during travel",
+      "SIM card on arrival"
+    ],
+    "notIncluded": [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses",
+      "Optional activities"
+    ],
+    "packages": {
+      "classic": {
+        "title": "Classic Mauritania",
+        "duration": "7 days",
+        "route": "Nouakchott → Atar → Chinguetti → Terjit → Nouakchott",
+        "price": "$800",
+        "highlights": [
+          "Day 1: Arrival Nouakchott, airport pickup, check-in, city tour",
+          "Day 2: Drive to Atar, visit ancient city, traditional lunch",
+          "Day 3: Chinguetti - UNESCO Site, ancient libraries, sand dunes",
+          "Day 4: Full day in desert, camel ride, Sahara night camp",
+          "Day 5: Terjit Oasis, natural springs swimming, picnic",
+          "Day 6: Return to Atar, local market, artisan crafts",
+          "Day 7: Drive back to Nouakchott, departure"
+        ]
+      },
+      "richat": {
+        "title": "Richat Structure Adventure",
+        "duration": "5 days",
+        "route": "Nouakchott → Atar → Richat → Atar → Nouakchott",
+        "price": "$650",
+        "highlights": [
+          "Day 1: Arrival Nouakchott, rest and briefing",
+          "Day 2: Drive to Atar, visit ancient city",
+          "Day 3: 4x4 expedition to Richat Structure (Eye of Africa)",
+          "Day 4: Explore surrounding desert, Ouadane ancient city",
+          "Day 5: Return to Nouakchott, departure"
+        ]
+      },
+      "banc": {
+        "title": "Banc d'Arguin & Coast",
+        "duration": "4 days",
+        "route": "Nouakchott → Banc d'Arguin National Park → Nouakchott",
+        "price": "$500",
+        "highlights": [
+          "Day 1: Arrival Nouakchott, coastal tour",
+          "Day 2: Banc d'Arguin National Park (UNESCO), flamingo boat trip",
+          "Day 3: Nouamghar village, traditional fishing, beach lunch",
+          "Day 4: Return Nouakchott, departure"
+        ]
+      },
+      "full": {
+        "title": "Full Mauritania Explorer",
+        "duration": "14 days",
+        "route": "Nouakchott → Banc d'Arguin → Atar → Chinguetti → Terjit → Richat → Ouadane → Tidjikja → Nouakchott",
+        "price": "$1,800",
+        "highlights": [
+          "Complete grand tour combining all major destinations expertly.",
+          "Includes Richat Structure, Tidjikja, and Banc d'Arguin.",
+          "Extended desert stays and profound cultural immersion."
+        ]
+      },
+      "business": {
+        "title": "Business & City",
+        "duration": "2 days",
+        "route": "Nouakchott only",
+        "price": "$200",
+        "highlights": [
+          "Airport VIP pickup",
+          "Hotel assistance",
+          "City tour (National Museum, Grande Mosquée)",
+          "Business meeting support",
+          "Departure assistance"
+        ]
+      }
+    }
+  }
+}
