@@ -18,9 +18,15 @@ export async function generateMetadata({
   const {locale} = await params;
   
   return {
-    title: "Mauritania Tours & Desert Packages | Mauritania Concierge",
-    description: "Discover Mauritania with expert-guided tours. Visit Chinguetti, Terjit, Richat Structure, Banc d'Arguin. Custom packages from $200.",
+    title: "Mauritania Desert Tours | Chinguetti, Terjit, Richat",
+    description: "Discover Mauritania with expert guided tours. Visit Chinguetti UNESCO site, Terjit Oasis, Eye of Africa. Packages from $200. Book on WhatsApp.",
     keywords: ["mauritania tours", "chinguetti tour", "richat structure", "terjit oasis", "banc d'arguin", "sahara desert tour mauritania", "atar mauritania tourism"],
+    openGraph: {
+      title: "Mauritania Desert Tours | Chinguetti, Terjit, Richat",
+      description: "Discover Mauritania with expert guided tours. Visit Chinguetti UNESCO site, Terjit Oasis, Eye of Africa. Packages from $200. Book on WhatsApp.",
+      url: 'https://mauritanieconcierge.com/tours',
+      type: 'website'
+    }
   };
 }
 
@@ -30,8 +36,23 @@ export default async function ToursPage({ params }: { params: Promise<{locale: s
 
   const t = await getTranslations('Tours');
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristAttraction',
+    name: 'Mauritania Desert Tours',
+    description: 'Discover Mauritania with expert guided tours. Visit Chinguetti UNESCO site, Terjit Oasis, Eye of Africa. Packages from $200.',
+    url: 'https://mauritanieconcierge.com/tours',
+    offers: {
+      '@type': 'Offer',
+      price: '200',
+      priceCurrency: 'USD'
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-gray-50 pb-24">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <main className="min-h-screen bg-gray-50 pb-24">
       <div className="relative h-[60vh] w-full flex items-center justify-center">
         <Image src="https://images.unsplash.com/photo-1489493512598-d08130f49bea?auto=format&fit=crop&w=2000&q=80" alt="Sahara Desert Dunes Mauritania Tours" fill sizes="100vw" priority className="object-cover brightness-[0.4]" />
         <div className="absolute inset-0 bg-[#0B1E2D]/40"></div>
@@ -56,5 +77,6 @@ export default async function ToursPage({ params }: { params: Promise<{locale: s
          </div>
       </div>
     </main>
+    </>
   );
 }

@@ -1,33 +1,32 @@
-import { MetadataRoute } from 'next';
-import { servicesData } from '@/lib/data/services';
+import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mauritaniaconcierge.com';
-  const locales = ['/en', '/fr', '/ar'];
-  const paths = ['', '/services', '/about', '/contact', '/faq'];
+  const baseUrl = 'https://mauritanieconcierge.com';
+  const locales = ['en', 'fr', 'ar'];
+  const baseRoutes = ['', '/services', '/tours', '/contact', '/about', '/faq', '/blog'];
   
-  const sitemap: MetadataRoute.Sitemap = [];
-  
+  // Blog routes
+  const blogSlugs = [
+    '/blog/top-10-things-to-do-in-mauritania',
+    '/blog/complete-guide-chinguetti-unesco',
+    '/blog/visiting-richat-structure-guide',
+    '/blog/terjit-oasis-hidden-paradise',
+    '/blog/mauritania-travel-tips'
+  ];
+
+  const routes = [...baseRoutes, ...blogSlugs];
+  const entries: MetadataRoute.Sitemap = [];
+
   locales.forEach((locale) => {
-    paths.forEach((path) => {
-      sitemap.push({
-        url: `${baseUrl}${locale}${path}`,
+    routes.forEach((route) => {
+      entries.push({
+        url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
-        priority: path === '' ? 1 : 0.8,
-      });
-    });
-    
-    // Services dynamic pages
-    servicesData.forEach((service) => {
-      sitemap.push({
-        url: `${baseUrl}${locale}/services/${service.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.9,
+        priority: route === '' ? 1 : 0.8,
       });
     });
   });
-  
-  return sitemap;
+
+  return entries;
 }
