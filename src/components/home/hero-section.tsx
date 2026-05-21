@@ -13,8 +13,8 @@ export function HeroSection() {
     <section className="relative h-screen w-full flex items-center bg-[#051017]">
       <div className="absolute inset-0 z-0">
         <Image 
-          src="https://images.unsplash.com/photo-1489493512598-d08130f49bea?auto=format&fit=crop&w=2000&q=80" 
-          alt="Mauritania desert landscape" 
+          src="https://images.unsplash.com/photo-1757438059090-445d7100e1bf?auto=format&fit=crop&w=2000&q=80"
+          alt="Sahara desert dunes in Mauritania"
           fill 
           sizes="100vw"
           className="object-cover brightness-[0.35]"
