@@ -6,7 +6,7 @@ export function WhatsAppButton() {
   const message = "Hello, I need assistance in Mauritania.";
   const encodedMessage = encodeURIComponent(message);
   // Default WhatsApp number will be replaced later
-  const phoneNumber = "22238075450"; 
+  const phoneNumber = "22241075450";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
   return (

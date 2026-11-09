@@ -16,7 +16,7 @@ export function TourCard({ tourId, imageSrc, imageAlt, mostPopular, locale }: an
   
   const highlights: string[] = tPackage.raw('highlights');
   
-  const phoneNumber = "22238075450"; 
+  const phoneNumber = "22241075450";
   const message = t('whatsAppPrefix', { tour: title, duration: duration });
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

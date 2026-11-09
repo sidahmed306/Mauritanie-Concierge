@@ -36,7 +36,7 @@ export default async function ServiceDetailsPage({
   const fullDesc = tService('fullDescription');
   const benefits: string[] = tService.raw('benefits');
 
-  const phoneNumber = "22238075450"; 
+  const phoneNumber = "22241075450";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hello, I would like to book the ${title} service.`)}`;
 
   return (
