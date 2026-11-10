@@ -55,7 +55,7 @@ export default async function Home({ params }: { params: Promise<{locale: string
     name: 'Mauritania Concierge',
     image: 'https://images.unsplash.com/photo-1757438059090-445d7100e1bf?auto=format&fit=crop&w=1200&q=80',
     description: 'Premium concierge and tourism service in Mauritania. VIP airport pickup, private driver, desert tours to Chinguetti, Terjit, Richat Structure (Eye of Africa). Visa assistance for foreigners.',
-    telephone: '+22238075450',
+    telephone: '+22241075450',
     email: 'mauritanieconcierge@gmail.com',
     address: {
       '@type': 'PostalAddress',

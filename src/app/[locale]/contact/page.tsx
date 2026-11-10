@@ -28,7 +28,7 @@ export default async function ContactPage({ params }: { params: Promise<{locale:
                     <Phone size={20} />
                   </div>
                   <div>
-                    <p className="font-semibold text-primary">+222 38 07 54 50</p>
+                    <p className="font-semibold text-primary">+222 41 07 54 50</p>
                     <p className="text-sm">WhatsApp Available</p>
                   </div>
                </div>

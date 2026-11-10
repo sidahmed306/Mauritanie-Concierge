@@ -21,7 +21,7 @@ export default async function ServicesPage({ params }: { params: Promise<{locale
   const t = await getTranslations('ServicesOverviewPage');
   const tServices = await getTranslations('Services');
 
-  const whatsappUrl = `https://wa.me/22238075450?text=${encodeURIComponent("Hello, I would like to inquire about your services in Mauritania.")}`;
+  const whatsappUrl = `https://wa.me/22241075450?text=${encodeURIComponent("Hello, I would like to inquire about your services in Mauritania.")}`;
 
   const practicalGuide = [
     {
