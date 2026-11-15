@@ -3,6 +3,21 @@
 import { createClient } from '@/lib/supabase/server';
 import { revalidatePath } from 'next/cache';
 
+/**
+ * Only the configured admin may moderate. Database RLS already requires a signed-in user;
+ * this also rejects any other signed-in account (e.g. if public sign-ups are enabled in Supabase).
+ */
+async function requireAdmin() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  if (!user || (adminEmail && user.email?.toLowerCase() !== adminEmail)) {
+    throw new Error('Not authorized');
+  }
+  return supabase;
+}
+
+
 export async function loginAdmin(formData: FormData) {
   const supabase = await createClient();
   const email = formData.get('email') as string;
@@ -30,13 +45,28 @@ export async function logoutAdmin() {
 }
 
 export async function updateRequestStatus(id: string, status: string) {
-  const supabase = await createClient();
+  const supabase = await requireAdmin();
   await supabase.from('contact_requests').update({ status }).eq('id', id);
   revalidatePath('/admin');
 }
 
 export async function deleteRequest(id: string) {
-  const supabase = await createClient();
+  const supabase = await requireAdmin();
   await supabase.from('contact_requests').delete().eq('id', id);
   revalidatePath('/admin');
+}
+
+export async function updateTestimonialStatus(id: string, approved: boolean) {
+  const supabase = await requireAdmin();
+  await supabase.from('testimonials').update({ approved }).eq('id', id);
+  revalidatePath('/admin');
+  // Also revalidate the home page so the new testimonial shows up or is removed
+  revalidatePath('/', 'layout');
+}
+
+export async function deleteTestimonial(id: string) {
+  const supabase = await requireAdmin();
+  await supabase.from('testimonials').delete().eq('id', id);
+  revalidatePath('/admin');
+  revalidatePath('/', 'layout');
 }

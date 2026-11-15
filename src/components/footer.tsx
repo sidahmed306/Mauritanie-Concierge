@@ -21,9 +21,11 @@ export function Footer() {
            <h3 className="text-lg font-bold mb-6 text-white">{t('links')}</h3>
            <ul className="flex flex-col text-gray-400 space-y-2">
              <li><Link href="/" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('home')}</Link></li>
-             <li><Link href="/services" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('services')}</Link></li>
-             <li><Link href="/tours" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('tours')}</Link></li>
+             <li><Link href="/services#corporate" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('business')}</Link></li>
+             <li><Link href="/services#tourist" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('tourism')}</Link></li>
+             <li><Link href="/destinations" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('destinations')}</Link></li>
              <li><Link href="/about" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('about')}</Link></li>
+             <li><Link href="/faq" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('faq')}</Link></li>
              <li><Link href="/contact" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('contact')}</Link></li>
            </ul>
         </div>

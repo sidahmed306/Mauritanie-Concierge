@@ -8,3 +8,13 @@
 body {
   @apply bg-gray-50 text-primary antialiased;
 }
+
+/* Slow zoom for the homepage background slideshow */
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.animate-kenburns { animation: kenburns 8s ease-out forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns { animation: none; }
+}

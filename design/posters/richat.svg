@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#02030a"/>
+      <stop offset="1" stop-color="#0b1430"/>
+    </linearGradient>
+    <linearGradient id="desert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c98a55"/>
+      <stop offset="0.4" stop-color="#d79a5e"/>
+      <stop offset="1" stop-color="#b8703f"/>
+    </linearGradient>
+    <radialGradient id="atmo" cx="960" cy="2600" r="2420" gradientUnits="userSpaceOnUse">
+      <stop offset="0.93" stop-color="#7fc4ff" stop-opacity="0"/>
+      <stop offset="0.975" stop-color="#8fd0ff" stop-opacity="0.75"/>
+      <stop offset="0.99" stop-color="#3f7fd6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1b3a80" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunlight" cx="1500" cy="200" r="1400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff1d0" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fff1d0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ead2a6"/>
+      <stop offset="1" stop-color="#c79a6a"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.55" r="0.8">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05040a" stop-opacity="0.7"/>
+    </radialGradient>
+    <clipPath id="planet"><circle cx="960" cy="2600" r="2300"/></clipPath>
+    <filter id="terrain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.005 0.009" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="34" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="1.6"/>
+    </filter>
+    <filter id="texture" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="5" seed="8"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 0.9 -0.25"/>
+    </filter>
+    <filter id="dunes" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.002 0.06" numOctaves="3" seed="12"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 0.72  0 0 0 0 0.42  0 0 0 1.4 -0.55"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.08"/></feComponentTransfer>
+    </filter>
+    <filter id="blur"><feGaussianBlur stdDeviation="3"/></filter><filter id="blur24" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#space)"/>
+  <g fill="#fff">
+    <circle cx="120" cy="40" r="1.4" opacity="0.8"/><circle cx="380" cy="90" r="1" opacity="0.6"/><circle cx="640" cy="30" r="1.2" opacity="0.7"/>
+    <circle cx="900" cy="70" r="0.9" opacity="0.6"/><circle cx="1180" cy="36" r="1.5" opacity="0.8"/><circle cx="1460" cy="80" r="1" opacity="0.6"/>
+    <circle cx="1720" cy="44" r="1.3" opacity="0.7"/><circle cx="1860" cy="110" r="0.9" opacity="0.5"/><circle cx="60" cy="140" r="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- planet surface -->
+  <g clip-path="url(#planet)">
+    <rect y="200" width="1920" height="900" fill="url(#desert)"/>
+    <rect y="200" width="1920" height="900" filter="url(#texture)"/>
+    <!-- linear dune streaks encroaching from the north-east -->
+    <rect x="-500" y="-300" width="2920" height="1700" filter="url(#dunes)" opacity="0.6" transform="rotate(-18 960 640)"/>
+    <!-- dark plateau patches -->
+    <g fill="#6a3f2c" opacity="0.45" filter="url(#blur24)">
+      <path d="M-200,460 C200,430 360,470 480,540 C560,600 520,720 420,780 C300,850 120,860 -200,840 Z"/>
+      <path d="M1480,500 C1640,470 1800,480 2100,520 L2100,900 C1780,880 1640,820 1560,740 C1480,660 1440,560 1480,500 Z"/>
+    </g>
+
+    <!-- the Eye: concentric rings, seen obliquely -->
+    <g transform="translate(960 690) scale(1 0.62)" filter="url(#terrain)">
+      <circle r="560" fill="#7a4a33" opacity="0.5"/>
+      <circle r="520" fill="none" stroke="#3e2522" stroke-width="34"/>
+      <circle r="470" fill="#b47a4c"/>
+      <circle r="452" fill="none" stroke="#e2b27a" stroke-width="18"/>
+      <circle r="410" fill="none" stroke="#4a2c26" stroke-width="40"/>
+      <circle r="360" fill="#a86f45"/>
+      <circle r="344" fill="none" stroke="#e6bb85" stroke-width="16"/>
+      <circle r="300" fill="none" stroke="#3a2324" stroke-width="36"/>
+      <circle r="254" fill="#9b6744"/>
+      <circle r="238" fill="none" stroke="#7aa3a8" stroke-width="10" opacity="0.7"/>
+      <circle r="200" fill="none" stroke="#45292a" stroke-width="30"/>
+      <circle r="160" fill="#b98652"/>
+      <circle r="132" fill="none" stroke="#5a3a33" stroke-width="18"/>
+      <circle r="100" fill="url(#core)"/>
+      <circle r="62" fill="none" stroke="#8a5d42" stroke-width="10"/>
+      <circle r="28" fill="#f3dfb8"/>
+    </g>
+    <!-- sand blowing over the eastern rings -->
+    <path d="M1240,520 C1360,560 1440,640 1460,760 C1400,700 1320,640 1220,600 Z" fill="#e8b37a" opacity="0.55" filter="url(#blur)"/>
+    <path d="M1300,800 C1380,820 1460,860 1520,920 C1440,900 1360,870 1290,840 Z" fill="#e8b37a" opacity="0.5" filter="url(#blur)"/>
+
+    <rect width="1920" height="1080" fill="url(#sunlight)"/>
+    <!-- wisps of cloud far below -->
+    <g fill="#ffffff" opacity="0.32" filter="url(#blur)">
+      <path d="M180,330 C320,310 460,320 560,340 C440,350 300,352 180,330 Z"/>
+      <path d="M1380,300 C1540,286 1700,292 1820,310 C1680,320 1520,320 1380,300 Z"/>
+      <path d="M260,960 C420,940 600,946 720,968 C560,978 400,980 260,960 Z"/>
+    </g>
+  </g>
+  <!-- atmosphere glow along the curved horizon -->
+  <rect width="1920" height="1080" fill="url(#atmo)"/>
+  <!-- orbit lens flare from the sun beyond the limb -->
+  <circle cx="1650" cy="292" r="5" fill="#fff"/>
+  <circle cx="1650" cy="292" r="40" fill="#fff6dc" opacity="0.25" filter="url(#blur)"/>
+
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <rect width="1920" height="1080" filter="url(#grain)"/>
+</svg>

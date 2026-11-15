@@ -98,7 +98,7 @@ export function ContactForm() {
               <option value="hotel">Hotel Assistance</option>
               <option value="translation">Translation Services</option>
               <option value="vip">VIP Delegation</option>
-              <option value="tours">Desert Tours & Travels</option>
+              <option value="tours">Desert Expeditions & Travel</option>
             </select>
           </div>
           <div className="w-full">

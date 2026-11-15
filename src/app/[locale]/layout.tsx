@@ -28,6 +28,7 @@ export async function generateMetadata({
     ar: 'خدمات الكونسيرج المميزة في موريتانيا. استقبال المطار لكبار الشخصيات والسائقين الخاصين في نواكشوط.'
   };
   return {
+    metadataBase: new URL('https://mauritanieconcierge.com'),
     title: titles[locale] || titles['en'],
     description: descriptions[locale] || descriptions['en'],
     keywords: ['Mauritania airport pickup', 'Mauritania concierge', 'Private driver Mauritania', 'Nouakchott airport transfer', 'Mauritania VIP services'],

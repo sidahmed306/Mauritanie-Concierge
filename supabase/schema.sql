@@ -17,8 +17,11 @@ CREATE TABLE testimonials (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   name TEXT NOT NULL,
   country TEXT NOT NULL,
+  tour_name TEXT,
   review TEXT NOT NULL,
   rating INTEGER DEFAULT 5 CHECK (rating >= 1 AND rating <= 5),
+  photo_url TEXT,
+  approved BOOLEAN DEFAULT false,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 

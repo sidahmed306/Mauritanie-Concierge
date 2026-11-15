@@ -8,6 +8,8 @@ interface Testimonial {
   country: string;
   review: string;
   rating: number;
+  tour_name?: string;
+  photo_url?: string;
 }
 
 export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[] }) {
@@ -52,11 +54,22 @@ export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[
               ))}
             </div>
             
-            <p className="text-xl md:text-3xl text-gray-700 leading-relaxed font-medium italic mb-10">"{current.review}"</p>
+            <p className="text-xl md:text-3xl text-gray-700 leading-relaxed font-medium italic mb-8">&quot;{current.review}&quot;</p>
             
-            <div>
-              <h4 className="text-xl font-bold text-primary">{current.name}</h4>
-              <p className="text-gray-500 uppercase tracking-widest text-sm mt-1">{current.country}</p>
+            {current.tour_name && (
+              <div className="mb-6 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
+                {current.tour_name}
+              </div>
+            )}
+            
+            <div className="flex items-center gap-4 mt-2">
+              {current.photo_url && (
+                <img src={current.photo_url} alt={current.name} className="w-14 h-14 rounded-full object-cover border-2 border-secondary" />
+              )}
+              <div className={current.photo_url ? "text-left" : ""}>
+                <h4 className="text-xl font-bold text-primary">{current.name}</h4>
+                <p className="text-gray-500 uppercase tracking-widest text-sm mt-1">{current.country}</p>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>

@@ -5,31 +5,48 @@
   "Navbar": {
     "home": "Accueil",
     "services": "Services",
-    "tours": "Circuits",
     "about": "À Propos",
     "contact": "Contact",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "business": "Entreprises",
+    "tourism": "Tourisme",
+    "destinations": "Destinations"
   },
   "Footer": {
-    "description": "Services de conciergerie premium en Mauritanie. Nous assurons l'accueil aéroportuaire, les chauffeurs privés, l'assistance hôtelière et les services VIP pour les étrangers, diplomates et investisseurs.",
+    "description": "Partenaire mobilité et conciergerie en Mauritanie. Accueil aéroport pour entreprises, transport à Nouakchott et dans tout le pays, services aux délégations et circuits pour clients internationaux et voyageurs.",
     "links": "Liens Rapides",
     "contact": "Contactez-nous",
     "rights": "Tous droits réservés. Mauritania Concierge.",
     "email": "mauritanieconcierge@gmail.com",
     "phone": "+222 41 07 54 50",
     "location": "Nouakchott, Mauritanie",
-    "tours": "Circuits"
+    "business": "Services entreprises",
+    "tourism": "Services touristiques",
+    "destinations": "Destinations",
+    "faq": "FAQ"
   },
   "Hero": {
-    "title": "Votre Conciergerie Personnelle",
+    "title": "Votre partenaire mobilité & conciergerie",
     "titleBreak": "en Mauritanie",
-    "subtitle": "Transfert aéroport, hébergement, chauffeur privé, traduction, assistance VIP et soutien logistique.",
-    "contactBtn": "Contacter via WhatsApp",
-    "exploreBtn": "Explorer les Services"
+    "subtitle": "De l’aéroport aux cités du désert : transport, services aux délégations et assistance voyage pour les entreprises internationales et les voyageurs.",
+    "contactBtn": "Contacter sur WhatsApp",
+    "exploreBtn": "Voir les services",
+    "tag": "Mobilité d’entreprise · Délégations · Voyage",
+    "businessBtn": "Services entreprises",
+    "tourismBtn": "Découvrir la Mauritanie",
+    "slides": [
+      "Accueil VIP à l’aéroport",
+      "Chinguetti, Adrar",
+      "Délégations d’affaires",
+      "Expéditions dans le désert",
+      "Oasis de Terjit, Adrar",
+      "La confiance d’entreprises internationales",
+      "Les dunes de Mauritanie"
+    ]
   },
   "ServicesOverview": {
-    "tag": "Nos Services",
-    "title": "Découvrez notre Assistance Premium",
+    "tag": "Nos services",
+    "title": "Des services pour les affaires et le voyage",
     "viewAll": "Voir Tous les Services",
     "ctaText": "Voir les Détails"
   },
@@ -92,15 +109,105 @@
         "Soutien Professionnel"
       ]
     },
-    "tourism": {
-      "title": "Tourisme & Excursions Désert",
-      "shortDescription": "Visites de Nouakchott et excursions inoubliables vers Chinguetti et le Banc d'Arguin.",
-      "fullDescription": "Explorez l'immense beauté de la Mauritanie. Des déserts historiques de Chinguetti aux superbes côtes du Banc d'Arguin. Nous concevons sur mesure des expériences touristiques inoubliables.",
+    "corporate-airport-reception": {
+      "title": "Accueil VIP à l’aéroport",
+      "shortDescription": "Accueil personnalisé des dirigeants à l’aéroport de Nouakchott avec assistance à l’arrivée et transfert privé.",
+      "fullDescription": "La première impression compte. Notre équipe accueille vos dirigeants et invités à l’aéroport international de Nouakchott-Oumtounsy, les assiste à l’arrivée, prend en charge leurs bagages et les conduit en véhicule exécutif jusqu’à leur hôtel ou leur première réunion. Nous suivons chaque vol pour que vos invités n’attendent jamais.",
       "benefits": [
-        "Visites de Nouakchott",
-        "Excursions dans le Désert",
-        "Voyages vers Chinguetti",
-        "Banc d'Arguin"
+        "Accueil personnalisé",
+        "Assistance aux formalités d’arrivée",
+        "Prise en charge des bagages",
+        "Véhicules exécutifs",
+        "Suivi des vols",
+        "Disponible 24h/24"
+      ]
+    },
+    "nouakchott-mobility": {
+      "title": "Mobilité à Nouakchott",
+      "shortDescription": "Chauffeurs et véhicules dédiés à vos équipes dans la capitale, à l’heure, à la journée ou au mois.",
+      "fullDescription": "Vos équipes se déplacent en toute fiabilité dans Nouakchott. Nous fournissons chauffeurs et véhicules dédiés pour les réunions, visites de sites et trajets quotidiens, avec des formules à l’heure, à la journée ou au mois et une facturation entreprise simple.",
+      "benefits": [
+        "Chauffeurs dédiés",
+        "À l’heure, à la journée ou au mois",
+        "Contrats mensuels entreprises",
+        "Véhicules exécutifs",
+        "Ponctualité & discrétion",
+        "Facturation entreprise"
+      ]
+    },
+    "delegation-logistics": {
+      "title": "Logistique des délégations",
+      "shortDescription": "Coordination multi-véhicules pour les délégations d’entreprises et gouvernementales, de l’arrivée au départ.",
+      "fullDescription": "Nous planifions et gérons la logistique terrain de votre délégation : accueil à l’aéroport, convois multi-véhicules, plannings coordonnés entre hôtel, ministères et lieux de réunion, et un coordinateur unique joignable pendant toute la mission.",
+      "benefits": [
+        "Convois multi-véhicules",
+        "Plannings coordonnés",
+        "Coordinateur dédié",
+        "De l’aéroport aux réunions",
+        "Toute taille de groupe",
+        "Interlocuteur unique"
+      ]
+    },
+    "business-interpretation": {
+      "title": "Interprétariat d’affaires",
+      "shortDescription": "Interprétation arabe, français et anglais pour réunions, négociations et visites institutionnelles.",
+      "fullDescription": "Communiquez en toute confiance. Nos interprètes accompagnent vos équipes en réunion, en négociation et lors des visites institutionnelles, et nous coordonnons la traduction de vos correspondances et documents en arabe, français et anglais.",
+      "benefits": [
+        "Arabe, français & anglais",
+        "Interprétation en réunion",
+        "Appui aux négociations",
+        "Traduction de documents",
+        "Visites institutionnelles",
+        "Confidentialité"
+      ]
+    },
+    "business-accommodation": {
+      "title": "Hébergement d’affaires",
+      "shortDescription": "Hôtels et appartements de standing sélectionnés pour les dirigeants et équipes en mission.",
+      "fullDescription": "Nous trouvons et organisons un hébergement adapté aux voyages d’affaires : hôtels réputés, appartements meublés pour les longs séjours et réservations de groupe pour les délégations, dans des quartiers sûrs et bien desservis de Nouakchott.",
+      "benefits": [
+        "Hôtels d’affaires",
+        "Appartements meublés",
+        "Longs séjours",
+        "Réservations de groupe",
+        "Quartiers sécurisés"
+      ]
+    },
+    "corporate-events": {
+      "title": "Événements & missions d’entreprise",
+      "shortDescription": "Coordination de réunions, séminaires et missions d’affaires en Mauritanie.",
+      "fullDescription": "D’une simple réunion à une mission d’affaires complète, nous coordonnons lieux, transport, interprétation et assistance sur place pour que votre événement se déroule sans accroc et que votre équipe se concentre sur ses objectifs.",
+      "benefits": [
+        "Coordination de réunions",
+        "Séminaires & conférences",
+        "Recherche de lieux",
+        "Accueil de délégations",
+        "Assistance sur place"
+      ]
+    },
+    "interior-transport": {
+      "title": "Transport à travers la Mauritanie",
+      "shortDescription": "Transport privé en 4x4 vers Chinguetti, Ouadane, Atar, Terjit, le Banc d’Arguin et au-delà.",
+      "fullDescription": "Voyagez en toute sécurité à travers le pays avec des chauffeurs expérimentés qui connaissent chaque route et chaque piste. Nous vous emmenons vers les cités historiques de Chinguetti et Ouadane, l’Adrar, l’oasis de Terjit, le Banc d’Arguin et Nouadhibou, avec des itinéraires flexibles construits autour de votre voyage.",
+      "benefits": [
+        "4x4 avec chauffeurs expérimentés",
+        "Cités historiques",
+        "Routes du désert",
+        "Trajets côtiers",
+        "Itinéraires flexibles",
+        "Porte à porte"
+      ]
+    },
+    "local-guides": {
+      "title": "Guides locaux",
+      "shortDescription": "Des guides passionnés, enfants du pays, qui font vivre les villes, le désert et la culture mauritanienne.",
+      "fullDescription": "Nos guides sont originaires des lieux qu’ils vous font découvrir. Dans les bibliothèques de Chinguetti, sur les dunes de l’Adrar, sur la plage des pêcheurs ou au bord du fleuve, ils partagent l’histoire, les légendes et la vie quotidienne de la Mauritanie, en arabe, en français ou en anglais.",
+      "benefits": [
+        "Guides de chaque région",
+        "Arabe, français & anglais",
+        "Histoire & culture",
+        "Expertise désert & nature",
+        "Visites privées ou en groupe"
       ]
     }
   },
@@ -111,12 +218,17 @@
     "bookTitle": "Réservez ce Service",
     "bookSubtitle": "Aucun formulaire en ligne compliqué. Contactez-nous directement sur WhatsApp pour coordonner les détails et sécuriser ce service instantanément.",
     "bookBtn": "Réserver sur WhatsApp",
-    "replyTime": "Réponse en moins de 5 minutes"
+    "replyTime": "Réponse en moins de 5 minutes",
+    "categoryCorporate": "Service entreprise",
+    "categoryTourist": "Service touristique",
+    "whatsappMessage": "Bonjour, je suis intéressé(e) par le service « {service} ». Mes dates : ",
+    "emailBtn": "Ou envoyer un email",
+    "relatedTitle": "Services associés"
   },
   "ServicesOverviewPage": {
-    "tag": "Notre Expertise",
-    "title": "Services de Conciergerie Intégraux",
-    "subtitle": "Nous offrons des solutions de luxe complètes pour les particuliers, les groupes et les délégations en Mauritanie."
+    "tag": "Nos services",
+    "title": "Services entreprises & services touristiques",
+    "subtitle": "Deux lignes de services dédiées : l’une pour les entreprises et délégations internationales, l’autre pour les voyageurs qui découvrent la Mauritanie."
   },
   "About": {
     "tag": "Notre Histoire",
@@ -205,98 +317,403 @@
         "country": "Etats-Unis",
         "review": "Idéal pour une investisseure arrivant sur Nouakchott sans repères. Le concierge a sécurisé ma réservation hôtelière instantanément sous de très hauts standards."
       }
+    ],
+    "summary": "{average} / 5 · sur la base de {count} avis vérifiés"
+  },
+  "AudiencePaths": {
+    "tag": "Deux façons de voyager avec nous",
+    "title": "Vous voyagez pour…",
+    "businessTitle": "Affaires",
+    "businessDesc": "Entreprises, investisseurs et délégations gouvernementales. Ponctualité, discrétion et coordination complète de l’arrivée au départ.",
+    "businessPoints": [
+      "Accueil VIP à l’aéroport",
+      "Mobilité à Nouakchott",
+      "Logistique des délégations",
+      "Interprétariat d’affaires"
+    ],
+    "businessCta": "Services entreprises",
+    "touristTitle": "Découvrir la Mauritanie",
+    "touristDesc": "Voyageurs et explorateurs. Expéditions dans le désert, cités historiques et transport fluide dans tout le pays.",
+    "touristPoints": [
+      "Accueil à l’aéroport",
+      "Chinguetti, Ouadane, Atar & Terjit",
+      "Circuits désert en 4x4",
+      "Assistance hôtelière"
+    ],
+    "touristCta": "Découvrir les expéditions"
+  },
+  "TrustedBy": {
+    "tag": "Reconnus à l’international",
+    "title": "La confiance d’entreprises et de réseaux internationaux",
+    "subtitle": "Nous servons des clients d’Europe, des États-Unis, du Royaume-Uni et de toute l’Afrique, et travaillons aux côtés de réseaux internationaux reconnus du tourisme et de la mobilité.",
+    "clientsLabel": "Clients",
+    "partnersLabel": "Partenaires & réseaux",
+    "regions": [
+      "Europe",
+      "États-Unis",
+      "Royaume-Uni",
+      "Afrique",
+      "Moyen-Orient"
     ]
   },
-  "Tours": {
-    "pageTitle": "Découvrez la Magie de la Mauritanie",
-    "pageSubtitle": "Des itinéraires conçus par des experts pour des voyages inoubliables",
-    "includedTitle": "Ce qui est inclus dans chaque circuit",
-    "notIncludedTitle": "Non Inclus",
-    "bookWhatsApp": "Réserver sur WhatsApp",
-    "viewDetails": "Voir les détails",
-    "mostPopular": "LE PLUS POPULAIRE",
-    "priceFrom": "À partir de {price} par personne",
-    "whatsAppPrefix": "Bonjour, je suis intéressé par la réservation du circuit {tour} de {duration}. Pourriez-vous m'envoyer plus d'informations ?",
-    "included": [
-      "Transferts aéroport aller-retour",
-      "Tous les transports en 4x4",
-      "Hébergement (hôtel ou camp dans le désert)",
-      "Guide parlant français/anglais/arabe",
-      "Tous les repas mentionnés dans l'itinéraire",
-      "Eau et collations pendant le voyage",
-      "Carte SIM à l'arrivée"
-    ],
-    "notIncluded": [
-      "Vols internationaux",
-      "Assurance voyage",
-      "Dépenses personnelles",
-      "Activités optionnelles"
-    ],
-    "packages": {
-      "classic": {
-        "title": "Classique Mauritanie",
-        "duration": "7 jours",
-        "route": "Nouakchott → Atar → Chinguetti → Terjit → Nouakchott",
-        "price": "800 $",
-        "highlights": [
-          "Jour 1: Arrivée Nouakchott, transfert, installation, visite de la ville",
-          "Jour 2: Route vers Atar, visite de l'ancienne ville, repas traditionnel",
-          "Jour 3: Chinguetti - Site UNESCO, anciennes bibliothèques, dunes",
-          "Jour 4: Journée complète dans le désert, bivouac, méharée",
-          "Jour 5: Oasis de Terjit, baignade dans les sources naturelles",
-          "Jour 6: Retour à Atar, marché local, artisanat",
-          "Jour 7: Retour à Nouakchott, départ"
-        ]
+  "WhyChooseUs": {
+    "tag": "Pourquoi nous choisir",
+    "title": "Reconnus à l’international, ancrés localement",
+    "subtitle": "Un partenaire de premier plan pour la mobilité et la conciergerie en Mauritanie, choisi par les entreprises internationales comme par les voyageurs.",
+    "items": [
+      {
+        "title": "Reconnaissance internationale",
+        "desc": "La confiance de Deloitte US et d’entreprises du monde entier, et des liens avec des réseaux internationaux du tourisme et de la mobilité."
       },
-      "richat": {
-        "title": "Aventure Structure de Richat",
-        "duration": "5 jours",
-        "route": "Nouakchott → Atar → Richat → Atar → Nouakchott",
-        "price": "650 $",
-        "highlights": [
-          "Jour 1: Arrivée Nouakchott, repos et briefing",
-          "Jour 2: Route vers Atar, visite",
-          "Jour 3: Expédition en 4x4 vers l'Oeil de l'Afrique (Richat)",
-          "Jour 4: Exploration du désert, ancienne ville de Ouadane",
-          "Jour 5: Retour à Nouakchott, départ"
-        ]
+      {
+        "title": "Tout véhicule, sur demande",
+        "desc": "D’une voiture avec chauffeur à un minibus pour un groupe ou des 4x4 pour le désert : dites-nous ce qu’il vous faut, nous l’organisons."
       },
-      "banc": {
-        "title": "Banc d'Arguin & Côte",
-        "duration": "4 jours",
-        "route": "Nouakchott → Parc National du Banc d'Arguin → Nouakchott",
-        "price": "500 $",
-        "highlights": [
-          "Jour 1: Arrivée Nouakchott, tour côtier",
-          "Jour 2: Parc National (UNESCO), balade en bateau, oiseaux migrateurs",
-          "Jour 3: Village de Nouamghar, pêche traditionnelle des Imraguens",
-          "Jour 4: Retour Nouakchott, départ"
-        ]
+      {
+        "title": "Disponibles 24h/24, 7j/7",
+        "desc": "Vols matinaux, réunions tardives, changements de dernière minute : nous répondons sur WhatsApp jour et nuit."
       },
-      "full": {
-        "title": "Le Grand Tour de Mauritanie",
-        "duration": "14 jours",
-        "route": "Nouakchott → Banc d'Arguin → Atar → Chinguetti → Terjit → Richat → Ouadane → Tidjikja → Nouakchott",
-        "price": "1 800 $",
-        "highlights": [
-          "Le grand circuit complet combinant avec expertise toutes les destinations majeures.",
-          "Inclut la Structure de Richat, Tidjikja et le Banc d'Arguin.",
-          "Immersion culturelle profonde et bivouacs étendus dans le désert."
-        ]
+      {
+        "title": "Arabe, français & anglais",
+        "desc": "Notre équipe travaille en trois langues, pour vos réunions, vos chauffeurs et vos déplacements."
       },
-      "business": {
-        "title": "Business & Ville",
-        "duration": "2 jours",
-        "route": "Nouakchott uniquement",
-        "price": "200 $",
-        "highlights": [
-          "Accueil aéroport VIP",
-          "Assistance hôtelière",
-          "Visite de ville (Musée National, Grande Mosquée)",
-          "Soutien aux réunions d'affaires",
-          "Assistance au départ"
-        ]
+      {
+        "title": "Couverture nationale",
+        "desc": "De Nouakchott à Nouadhibou, Atar, Chinguetti, Ouadane et le Banc d’Arguin."
+      },
+      {
+        "title": "Sécurité & discrétion",
+        "desc": "Chauffeurs vérifiés, itinéraires sûrs et traitement confidentiel de chaque mission d’entreprise."
       }
-    }
+    ]
+  },
+  "Fleet": {
+    "tag": "Transport & mobilité",
+    "title": "Tout véhicule, sur demande",
+    "subtitle": "Nous ne vous demandons pas de choisir dans un catalogue. Entreprise, délégation ou voyageur, vous nous dites ce dont votre déplacement a besoin et nous l’organisons, avec un chauffeur professionnel.",
+    "examples": "Une voiture avec chauffeur pour une journée, un minibus pour une délégation, des 4x4 pour le désert ou un contrat mensuel pour votre équipe : c’est vous qui choisissez.",
+    "stepsTitle": "Dites-nous simplement :",
+    "steps": [
+      {
+        "title": "Combien de voyageurs",
+        "desc": "Un dirigeant, une famille ou une délégation entière."
+      },
+      {
+        "title": "Où vous allez",
+        "desc": "Nouakchott, l’aéroport, l’Adrar, la côte ou le fleuve."
+      },
+      {
+        "title": "Pour combien de temps",
+        "desc": "Un transfert, une journée, une semaine ou un contrat mensuel."
+      },
+      {
+        "title": "Vos préférences",
+        "desc": "Confort, type de véhicule, horaires, langue du chauffeur."
+      }
+    ],
+    "onRequestCta": "Dites-nous ce qu’il vous faut",
+    "whatsappMessage": "Bonjour, j’ai besoin d’un transport en Mauritanie. Voyageurs : , destination : , dates : ",
+    "examplesTitle": "Exemples de véhicules que nous organisons",
+    "examplesNote": "Exemples seulement : le modèle exact dépend des disponibilités et de votre demande.",
+    "creditsTitle": "Crédits photos",
+    "vehicles": {
+      "sedan": {
+        "name": "Berline",
+        "use": "Toyota Camry ou similaire · ville & aéroport"
+      },
+      "suv": {
+        "name": "SUV 4x4",
+        "use": "Toyota Prado ou similaire · affaires & routes"
+      },
+      "pickup": {
+        "name": "Pick-up 4x4",
+        "use": "Toyota Hilux ou similaire · désert & missions terrain"
+      },
+      "minibus": {
+        "name": "Minibus",
+        "use": "Toyota Hiace ou similaire · groupes & délégations"
+      }
+    },
+    "requestsTag": "Vous demandez, nous organisons",
+    "requestsTitle": "Au-delà du transport : si vous en avez besoin, demandez",
+    "requestsSubtitle": "Nos clients nous demandent toutes sortes de choses, d’un chauffeur à 4 h du matin au programme complet d’une délégation. En voici quelques exemples. La liste ne s’arrête pas là.",
+    "requests": [
+      "Accueil VIP à l’aéroport",
+      "Une voiture avec chauffeur",
+      "Un interprète pour une réunion",
+      "Un hôtel ou un appartement",
+      "Une carte SIM locale",
+      "Une salle de réunion",
+      "Une nuit en campement dans le désert",
+      "Un guide local",
+      "Une réservation au restaurant",
+      "Rendez-vous et visites de sites",
+      "La logistique de toute une délégation",
+      "Un changement de dernière minute"
+    ],
+    "requestsMore": "Et tout le reste…",
+    "requestsCta": "Faire une demande",
+    "requestsWhatsapp": "Bonjour, j’ai une demande pour mon séjour en Mauritanie : "
+  },
+  "HowItWorks": {
+    "tag": "Comment ça marche",
+    "title": "Simple, direct et transparent",
+    "steps": [
+      {
+        "title": "Contactez-nous",
+        "desc": "Écrivez-nous sur WhatsApp ou par email avec vos dates, votre groupe et vos besoins."
+      },
+      {
+        "title": "Recevez votre proposition",
+        "desc": "Nous répondons rapidement avec une proposition sur mesure : véhicules, chauffeurs, planning et prix."
+      },
+      {
+        "title": "Nous nous occupons de tout",
+        "desc": "De l’aéroport à votre dernière réunion ou jusqu’au désert, notre équipe gère chaque détail sur le terrain."
+      }
+    ],
+    "cta": "Commencer sur WhatsApp",
+    "emailCta": "Envoyer un email"
+  },
+  "ServiceCategories": {
+    "corporateTag": "Pour les entreprises & délégations",
+    "corporateTitle": "Services entreprises",
+    "corporateSubtitle": "Accueil aéroport, mobilité dans la capitale et accompagnement complet des délégations pour les entreprises internationales, les investisseurs et les missions gouvernementales.",
+    "touristTag": "Pour les voyageurs",
+    "touristTitle": "Services touristiques",
+    "touristSubtitle": "Accueil aéroport, transport dans tout le pays, circuits dans le désert et assistance pour découvrir la Mauritanie en toute sérénité."
+  },
+  "Destinations": {
+    "tag": "Expéditions",
+    "title": "Là où le désert murmure ses plus anciennes histoires",
+    "subtitle": "Suivez les routes des caravanes jusqu’aux cités de pierre et d’étoiles. Contemplez l’œil immense qui s’ouvre au cœur du Sahara, voyez un million d’ailes s’élever au-dessus de l’Atlantique, partagez trois verres de thé sur un rivage doré, et laissez-vous porter par le fleuve où la Mauritanie devient verte. Cinq voyages, une terre qui ne vous quitte plus.",
+    "homeTag": "Destinations",
+    "homeTitle": "Où vous mènera votre expédition ?",
+    "homeSubtitle": "Cinq expéditions signatures, du désert à l’Atlantique et au fleuve.",
+    "viewAll": "Toutes les destinations",
+    "flagship": "Expédition phare",
+    "expedition": "Expédition {number}",
+    "discover": "Découvrir",
+    "backToAll": "Toutes les destinations",
+    "highlightsTitle": "Pourquoi y aller",
+    "sitesTitle": "Ce que vous verrez",
+    "practicalTitle": "Informations pratiques",
+    "bestSeason": "Meilleure saison",
+    "duration": "Durée conseillée",
+    "access": "Comment s’y rendre",
+    "galleryTitle": "Galerie",
+    "otherTitle": "Autres expéditions",
+    "ctaTitle": "Organiser cette expédition",
+    "ctaDesc": "Indiquez-nous vos dates et la taille du groupe. Nous préparons un itinéraire sur mesure avec véhicules, chauffeurs-guides et hébergement.",
+    "ctaBtn": "Organiser sur WhatsApp",
+    "emailBtn": "Ou envoyer un email",
+    "whatsappMessage": "Bonjour, je suis intéressé(e) par l’expédition « {destination} ». Mes dates : ",
+    "creditsTitle": "Crédits photos",
+    "items": {
+      "adrar": {
+        "name": "L’Adrar et les cités anciennes",
+        "tagline": "Cités caravanières, manuscrits et dunes à perte de vue",
+        "short": "Chinguetti, Ouadane, l’oasis de Terjit et les grandes dunes : le cœur de la Mauritanie saharienne.",
+        "intro": "L’Adrar est l’âme du Sahara mauritanien. Pendant des siècles, les caravanes ont traversé ses plateaux pour rejoindre les ksour, cités marchandes fortifiées où des savants copiaient des manuscrits encore conservés aujourd’hui dans des bibliothèques familiales. Chinguetti, Ouadane, Tichitt et Oualata sont inscrites au patrimoine mondial de l’UNESCO, entourées d’ergs dorés, de falaises noires et d’oasis cachées.",
+        "highlights": [
+          {
+            "title": "Cités anciennes UNESCO",
+            "desc": "Parcourez les ruelles de pierre de Chinguetti et Ouadane, parmi les grandes cités historiques du Sahara."
+          },
+          {
+            "title": "Manuscrits séculaires",
+            "desc": "Visitez les bibliothèques familiales de Chinguetti qui conservent corans et textes scientifiques."
+          },
+          {
+            "title": "Oasis & dunes",
+            "desc": "Baignez-vous à la source de Terjit, dormez sous les étoiles et admirez le coucher du soleil sur les dunes de l’Amatlich."
+          }
+        ],
+        "sites": [
+          {
+            "name": "Chinguetti",
+            "desc": "Considérée par beaucoup comme la septième ville sainte de l’islam, avec sa mosquée historique et ses bibliothèques."
+          },
+          {
+            "name": "Ouadane",
+            "desc": "Une spectaculaire cité de pierre accrochée à la falaise, porte d’entrée vers la structure de Richat."
+          },
+          {
+            "name": "Terjit",
+            "desc": "Une source ombragée de palmiers au fond d’une gorge, une véritable oasis."
+          },
+          {
+            "name": "Atar",
+            "desc": "La capitale de l’Adrar et point de départ de chaque expédition."
+          },
+          {
+            "name": "Tichitt & Oualata",
+            "desc": "Ksour isolés célèbres pour leur architecture décorée, sur demande avec un plan de sécurité adapté."
+          }
+        ],
+        "bestSeason": "De novembre à mars",
+        "duration": "5 à 10 jours",
+        "access": "Environ 450 km de Nouakchott à Atar par la route, puis pistes en 4x4.",
+        "onRequest": "Tichitt et Oualata se trouvent à l’extrême est du pays. Plusieurs gouvernements déconseillent actuellement de s’y rendre : nous organisons ces visites uniquement sur demande, avec un plan de sécurité adapté."
+      },
+      "richat-structure": {
+        "name": "La structure de Richat, l’Œil du Sahara",
+        "tagline": "Un cercle de 40 km visible depuis l’espace",
+        "short": "Une formation géologique géante, si vaste que les astronautes s’en servent comme repère depuis l’orbite.",
+        "intro": "Au milieu du Sahara, près de Ouadane, des anneaux concentriques de roche dessinent un cercle d’environ 40 km de large : le Guelb er Richat, surnommé l’Œil du Sahara ou l’Œil de l’Afrique. Longtemps pris pour un cratère de météorite, c’est en réalité un ancien dôme érodé. Vu de l’espace, il est saisissant ; au sol, traverser ses anneaux en 4x4 est une aventure inoubliable.",
+        "highlights": [
+          {
+            "title": "Visible depuis l’espace",
+            "desc": "L’un des repères les plus célèbres de la Terre pour les astronautes de la Station spatiale internationale."
+          },
+          {
+            "title": "Expédition en 4x4",
+            "desc": "Traversez les anneaux avec des chauffeurs expérimentés du désert jusqu’au cœur de la structure."
+          },
+          {
+            "title": "Une nuit dans le désert",
+            "desc": "Campez sous l’un des ciels nocturnes les plus purs au monde."
+          }
+        ],
+        "sites": [
+          {
+            "name": "Les anneaux extérieurs",
+            "desc": "Des crêtes de quartzite qui dessinent les fameux cercles vus d’en haut."
+          },
+          {
+            "name": "La zone centrale",
+            "desc": "Le cœur de l’œil, une vaste plaine de roches et de sable."
+          },
+          {
+            "name": "Ouadane",
+            "desc": "La cité ancienne voisine, idéale à combiner avec l’expédition Adrar."
+          }
+        ],
+        "bestSeason": "De novembre à mars",
+        "duration": "4 à 6 jours depuis Nouakchott",
+        "access": "Via Atar et Ouadane, puis environ 40 km de pistes hors route."
+      },
+      "banc-d-arguin": {
+        "name": "Parc national du Banc d’Arguin",
+        "tagline": "Faune sauvage et côte atlantique",
+        "short": "Là où le Sahara rencontre l’océan : un parc UNESCO et l’un des plus grands sanctuaires d’oiseaux au monde.",
+        "intro": "Entre Nouakchott et Nouadhibou, les dunes du désert plongent directement dans l’Atlantique. Le parc national du Banc d’Arguin, inscrit au patrimoine mondial de l’UNESCO, protège des hauts-fonds et des îles où plus de deux millions d’oiseaux migrateurs passent l’hiver. Les pêcheurs imraguen y naviguent encore sur leurs lanches traditionnelles, les bateaux à moteur étant interdits dans le parc.",
+        "highlights": [
+          {
+            "title": "Paradis des oiseaux",
+            "desc": "Flamants, pélicans, spatules et immenses vols d’oiseaux limicoles migrateurs."
+          },
+          {
+            "title": "Le désert rencontre l’océan",
+            "desc": "Des dunes dorées qui tombent dans une eau turquoise, un paysage presque unique au monde."
+          },
+          {
+            "title": "Culture imraguen",
+            "desc": "Rencontrez les communautés de pêcheurs et naviguez sur leurs bateaux traditionnels."
+          }
+        ],
+        "sites": [
+          {
+            "name": "Iwik & les îles",
+            "desc": "Sorties en bateau autour des îles où se rassemblent les oiseaux."
+          },
+          {
+            "name": "Cap Tafarit",
+            "desc": "Plages sauvages et falaises en bordure du désert."
+          },
+          {
+            "name": "Villages imraguen",
+            "desc": "La vie traditionnelle des pêcheurs le long de la côte."
+          }
+        ],
+        "bestSeason": "D’octobre à avril (oiseaux migrateurs)",
+        "duration": "2 à 4 jours",
+        "access": "Environ 250 km au nord de Nouakchott sur la route de Nouadhibou, puis pistes désertiques."
+      },
+      "nouakchott-nouadhibou": {
+        "name": "Culture & expériences urbaines",
+        "tagline": "Nouakchott et Nouadhibou : une introduction à la culture mauritanienne",
+        "short": "Marchés aux poissons, cérémonie du thé, artisanat et le célèbre train du minerai : la Mauritanie telle qu’elle vit aujourd’hui.",
+        "intro": "La meilleure introduction à la Mauritanie commence par ses villes. À Nouakchott, des centaines de pirogues peintes reviennent sur la plage chaque après-midi, les marchés débordent de couleurs et chaque visite commence par trois verres de thé. À Nouadhibou, sur l’Atlantique, vous pouvez voir arriver du désert l’un des plus longs trains du monde et explorer le Cap Blanc et sa côte.",
+        "highlights": [
+          {
+            "title": "La plage des pêcheurs",
+            "desc": "La scène la plus vivante de Nouakchott : pirogues, filets et pêche du jour au coucher du soleil."
+          },
+          {
+            "title": "La cérémonie du thé",
+            "desc": "Partagez les fameux trois verres de thé et l’hospitalité mauritanienne."
+          },
+          {
+            "title": "Le train du minerai",
+            "desc": "À Nouadhibou, voyez arriver du Sahara un train pouvant atteindre 2,5 km de long."
+          }
+        ],
+        "sites": [
+          {
+            "name": "Marché aux poissons de Nouakchott",
+            "desc": "Pirogues, pêcheurs et commerçants sur la plage atlantique."
+          },
+          {
+            "name": "Marchés & artisanat",
+            "desc": "Bijoux en argent, maroquinerie, tissus et épices."
+          },
+          {
+            "name": "Nouadhibou & Cap Blanc",
+            "desc": "Le port de pêche, la côte et la réserve du Cap Blanc."
+          },
+          {
+            "name": "Cuisine mauritanienne",
+            "desc": "Thiéboudiène, poisson grillé, méchoui et spécialités locales."
+          }
+        ],
+        "bestSeason": "Toute l’année (plus agréable d’octobre à mai)",
+        "duration": "1 à 5 jours",
+        "access": "Nouakchott est votre point d’arrivée ; Nouadhibou est à environ 470 km au nord par la route ou à un court vol."
+      },
+      "diawling-senegal-river": {
+        "name": "Parc national du Diawling & fleuve Sénégal",
+        "tagline": "Le visage africain de la Mauritanie",
+        "short": "Zones humides, oiseaux et villages au bord du fleuve Sénégal : une tout autre Mauritanie.",
+        "intro": "Au sud, le désert laisse place à la vallée verdoyante du fleuve Sénégal. Le parc national du Diawling protège les zones humides du bas delta, refuge des pélicans, flamants et hérons, et fait partie d’une réserve de biosphère transfrontalière avec le Sénégal. Le long du fleuve, les villages haalpulaar, soninké et wolof, les pirogues et les rizières révèlent le visage africain de la Mauritanie.",
+        "highlights": [
+          {
+            "title": "Zones humides & oiseaux",
+            "desc": "Pélicans, flamants, hérons et bien d’autres dans les bassins du Diawling."
+          },
+          {
+            "title": "La vie sur le fleuve",
+            "desc": "Pirogues, pêcheurs et marchés le long du fleuve Sénégal."
+          },
+          {
+            "title": "Diversité culturelle",
+            "desc": "Découvrez les communautés haalpulaar, soninké et wolof de la vallée."
+          }
+        ],
+        "sites": [
+          {
+            "name": "Parc national du Diawling",
+            "desc": "Lagunes, bassins et dunes du bas delta du Sénégal."
+          },
+          {
+            "name": "Rosso",
+            "desc": "La ville fluviale à la frontière avec le Sénégal."
+          },
+          {
+            "name": "Kaédi & la vallée",
+            "desc": "Ports fluviaux, villages et cultures plus en amont."
+          }
+        ],
+        "bestSeason": "De novembre à mars",
+        "duration": "2 à 4 jours",
+        "access": "Environ 200 km au sud de Nouakchott jusqu’à Rosso, puis pistes vers le parc."
+      }
+    },
+    "servicesTag": "Pour votre voyage",
+    "servicesTitle": "Services touristiques",
+    "servicesSubtitle": "Autour de chaque expédition, nous nous occupons du reste : votre arrivée, vos déplacements, votre séjour et ceux qui vous guideront.",
+    "expeditionsBannerTitle": "Commencez par nos cinq expéditions",
+    "expeditionsBannerDesc": "L’Adrar, l’Œil du Sahara, le Banc d’Arguin, la culture de Nouakchott et Nouadhibou, le fleuve Sénégal.",
+    "expeditionsBannerCta": "Découvrir les expéditions"
   }
 }

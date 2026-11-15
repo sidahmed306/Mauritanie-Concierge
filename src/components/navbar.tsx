@@ -19,7 +19,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-primary py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         
         <Link href="/" className={`text-xl md:text-2xl font-bold tracking-tighter truncate max-w-[60%] shrink-0 ${isScrolled ? 'text-primary' : 'text-white'}`}>
@@ -27,12 +27,11 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className={`hidden md:flex items-center gap-6 lg:gap-8 font-medium ${isScrolled ? 'text-primary' : 'text-white/90'}`}>
+        <div className={`hidden lg:flex items-center gap-5 xl:gap-7 font-medium ${isScrolled ? 'text-primary' : 'text-white/90'}`}>
           <Link href="/" className="hover:text-secondary transition-colors py-2">{t('home')}</Link>
-          <Link href="/services" className="hover:text-secondary transition-colors py-2">{t('services')}</Link>
-          <Link href="/tours" className="hover:text-secondary transition-colors py-2">{t('tours')}</Link>
+          <Link href="/services#corporate" className="hover:text-secondary transition-colors py-2">{t('business')}</Link>
+          <Link href="/destinations" className="hover:text-secondary transition-colors py-2">{t('tourism')}</Link>
           <Link href="/about" className="hover:text-secondary transition-colors py-2">{t('about')}</Link>
-          <Link href="/faq" className="hover:text-secondary transition-colors py-2">{t('faq')}</Link>
           
           <div className={`w-px h-6 mx-2 ${isScrolled ? 'bg-gray-200' : 'bg-white/20'}`}></div>
           
@@ -45,7 +44,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
-          className={`md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] ${isScrolled ? 'text-primary' : 'text-white'}`}
+          className={`lg:hidden flex items-center justify-center min-h-[44px] min-w-[44px] ${isScrolled ? 'text-primary' : 'text-white'}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={32} /> : <Menu size={32} />}
@@ -55,10 +54,10 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col gap-6 md:hidden text-primary border-t border-gray-100 max-h-[80vh] overflow-y-auto">
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col gap-6 lg:hidden text-primary border-t border-gray-100 max-h-[80vh] overflow-y-auto">
           <Link href="/" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('home')}</Link>
-          <Link href="/services" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('services')}</Link>
-          <Link href="/tours" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('tours')}</Link>
+          <Link href="/services#corporate" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('business')}</Link>
+          <Link href="/destinations" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('tourism')}</Link>
           <Link href="/about" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('about')}</Link>
           <Link href="/faq" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('faq')}</Link>
           

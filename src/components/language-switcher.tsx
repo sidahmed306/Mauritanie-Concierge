@@ -15,11 +15,11 @@ export function LanguageSwitcher() {
 
   return (
     <div className="flex items-center gap-2 bg-gray-100/10 hover:bg-gray-100/20 transition-colors px-3 py-1.5 rounded-full border border-gray-200/20 backdrop-blur-sm">
-      <Globe size={16} className="text-primary opacity-80" />
+      <Globe size={16} className="text-current opacity-80" />
       <select 
         value={locale} 
         onChange={handleLanguageChange}
-        className="bg-transparent text-sm font-bold text-primary outline-none cursor-pointer appearance-none uppercase pr-2 z-10 relative"
+        className="bg-transparent text-sm font-bold text-current outline-none cursor-pointer appearance-none uppercase pr-2 z-10 relative"
       >
         <option value="en" className="text-black bg-white">EN</option>
         <option value="fr" className="text-black bg-white">FR</option>

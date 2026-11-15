@@ -1,9 +1,10 @@
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { servicesData } from '@/lib/data/services';
+import { servicesData, whatsappLink, CONTACT_EMAIL } from '@/lib/data/services';
 import Image from 'next/image';
-import { CheckCircle2, MessageCircle, ArrowLeft } from 'lucide-react';
+import { CheckCircle2, MessageCircle, ArrowLeft, Mail, Briefcase, Compass } from 'lucide-react';
 import { Link } from '@/i18n/routing';
+import { ServiceCard } from '@/components/service-card';
 
 export function generateStaticParams() {
   const params: { locale: string, slug: string }[] = [];
@@ -24,6 +25,9 @@ export default async function ServiceDetailsPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
+  // The former generic "Tourism & Desert Tours" service is now the expeditions page.
+  if (slug === 'tourism') permanentRedirect(`/${locale}/destinations`);
+
   const service = servicesData.find((s) => s.slug === slug);
   if (!service) {
     notFound();
@@ -36,8 +40,13 @@ export default async function ServiceDetailsPage({
   const fullDesc = tService('fullDescription');
   const benefits: string[] = tService.raw('benefits');
 
-  const phoneNumber = "22241075450";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hello, I would like to book the ${title} service.`)}`;
+  const tServices = await getTranslations('Services');
+  const whatsappUrl = whatsappLink(t('whatsappMessage', { service: title }));
+  const isCorporate = service.category === 'corporate';
+  const CategoryIcon = isCorporate ? Briefcase : Compass;
+  const related = servicesData
+    .filter((s) => s.category === service.category && s.slug !== service.slug)
+    .slice(0, 3);
 
   return (
     <main className="min-h-screen pb-24 bg-white">
@@ -46,9 +55,12 @@ export default async function ServiceDetailsPage({
         <Image src={service.imageSrc} alt={`${title} in Mauritania`} fill sizes="100vw" priority className="object-cover brightness-[0.4]" />
         <div className="absolute inset-0 bg-primary/40"></div>
         <div className="absolute inset-0 flex flex-col justify-center container mx-auto px-6 md:px-12 pt-20">
-          <Link href="/services" className="text-white/80 hover:text-white flex items-center gap-2 font-medium mb-6 transition-colors w-fit">
-            <ArrowLeft size={20} /> {t('backToServices')}
+          <Link href={`/services#${service.category}`} className="text-white/80 hover:text-white flex items-center gap-2 font-medium mb-6 transition-colors w-fit">
+            <ArrowLeft size={20} className="rtl:rotate-180" /> {t('backToServices')}
           </Link>
+          <span className="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full bg-secondary text-primary text-sm font-bold mb-4">
+            <CategoryIcon size={16} /> {isCorporate ? t('categoryCorporate') : t('categoryTourist')}
+          </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">{title}</h1>
         </div>
       </div>
@@ -87,11 +99,36 @@ export default async function ServiceDetailsPage({
                  {t('bookBtn')}
                </a>
 
+               <a
+                 href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(title)}`}
+                 className="w-full mt-3 border border-gray-200 text-primary py-3 px-6 rounded-xl font-bold hover:bg-white transition-colors flex items-center justify-center gap-3 min-h-[44px]"
+               >
+                 <Mail size={20} />
+                 {t('emailBtn')}
+               </a>
+
                <p className="text-xs text-gray-400 mt-4 text-center">{t('replyTime')}</p>
             </div>
           </div>
         </div>
       </div>
+
+      {related.length > 0 && (
+        <div className="container mx-auto px-6 md:px-12 mt-24 max-w-6xl">
+          <h2 className="text-3xl font-bold text-primary mb-8">{t('relatedTitle')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {related.map((r) => (
+              <ServiceCard
+                key={r.slug}
+                title={tServices(`${r.slug}.title`)}
+                description={tServices(`${r.slug}.shortDescription`)}
+                href={`/services/${r.slug}`}
+                imageSrc={r.imageSrc}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }

@@ -1,13 +1,17 @@
 import { ServiceCard } from '@/components/service-card';
-import { servicesData } from '@/lib/data/services';
+import { corporateServices, touristServices, whatsappLink } from '@/lib/data/services';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { MessageCircle } from 'lucide-react';
+import { Briefcase, Compass, MessageCircle } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import { Link } from '@/i18n/routing';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Services | Mauritania Concierge – Airport Pickup, Private Driver, Desert Tours",
-  description: "Premium concierge services in Mauritania: VIP airport pickup, private driver Nouakchott, hotel assistance, desert tours Chinguetti, translation, visa guide for foreigners.",
+  title: "Services | Mauritania Concierge – Corporate Mobility, Delegations, Airport Pickup & Desert Tours",
+  description: "Corporate services (VIP airport reception, chauffeurs in Nouakchott, delegation logistics, business interpretation) and tourist services (airport pickup, transport across Mauritania, desert tours Chinguetti) in Mauritania.",
   keywords: [
+    "corporate transport Nouakchott", "delegation logistics Mauritania", "business travel Mauritania",
     "services tourisme Mauritanie", "airport pickup Nouakchott", "chauffeur privé Mauritanie",
     "visa Mauritanie étranger", "guide pratique Mauritanie", "sécurité Mauritanie touriste",
     "tourisme Mauritanie", "safari désert Mauritanie", "Chinguetti tour"
@@ -20,8 +24,15 @@ export default async function ServicesPage({ params }: { params: Promise<{locale
 
   const t = await getTranslations('ServicesOverviewPage');
   const tServices = await getTranslations('Services');
+  const tCat = await getTranslations('ServiceCategories');
+  const tDest = await getTranslations('Destinations');
 
-  const whatsappUrl = `https://wa.me/22241075450?text=${encodeURIComponent("Hello, I would like to inquire about your services in Mauritania.")}`;
+  const whatsappUrl = whatsappLink("Hello, I would like to inquire about your services in Mauritania.");
+
+  const categories = [
+    { key: 'corporate' as const, icon: Briefcase, items: corporateServices, bg: 'bg-gray-50' },
+    { key: 'tourist' as const, icon: Compass, items: touristServices, bg: 'bg-white' }
+  ];
 
   const practicalGuide = [
     {
@@ -68,20 +79,59 @@ export default async function ServicesPage({ params }: { params: Promise<{locale
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="container mx-auto px-6 md:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={tServices(`${service.slug}.title`)}
-              description={tServices(`${service.slug}.shortDescription`)}
-              href={`/services/${service.slug}`}
-              imageSrc={service.imageSrc}
-            />
+      {/* Category jump links */}
+      <div className="bg-primary pb-12 -mt-1">
+        <div className="container mx-auto px-6 md:px-12 flex flex-col sm:flex-row justify-center gap-4">
+          {categories.map(({ key, icon: Icon }) => (
+            <a key={key} href={`#${key}`} className="flex items-center justify-center gap-3 px-7 py-4 rounded-xl border border-secondary/40 text-white hover:bg-secondary hover:text-primary transition-colors font-bold min-h-[44px]">
+              <Icon size={20} /> {tCat(`${key}Title`)}
+            </a>
           ))}
         </div>
       </div>
+
+      {/* Service categories */}
+      {categories.map(({ key, icon: Icon, items, bg }) => (
+        <section key={key} id={key} className={`${bg} py-20 scroll-mt-24`}>
+          <div className="container mx-auto px-6 md:px-12">
+            <div className="flex items-start gap-5 mb-12 max-w-3xl">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary text-secondary shrink-0">
+                <Icon size={28} />
+              </div>
+              <div>
+                <p className="text-secondary font-bold tracking-widest uppercase text-sm mb-2">{tCat(`${key}Tag`)}</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">{tCat(`${key}Title`)}</h2>
+                <p className="text-gray-600 text-lg">{tCat(`${key}Subtitle`)}</p>
+              </div>
+            </div>
+            {key === 'tourist' && (
+              <Link href="/destinations" className="group relative block overflow-hidden rounded-3xl mb-10 min-h-[320px] shadow-lg">
+                <Image src="/images/destinations/adrar/chinguetti-minaret.jpg" alt="The minaret of the Chinguetti mosque at sunset" fill sizes="100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-[#051017]/90 via-[#051017]/50 to-transparent"></div>
+                <div className="relative z-10 p-8 md:p-12 max-w-2xl">
+                  <p className="text-secondary font-bold tracking-widest uppercase text-sm mb-3">{tDest('tag')}</p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{tDest('expeditionsBannerTitle')}</h3>
+                  <p className="text-white/80 text-lg mb-6">{tDest('expeditionsBannerDesc')}</p>
+                  <span className="inline-flex items-center gap-2 bg-secondary text-primary font-bold px-6 py-3 rounded-xl group-hover:gap-3 transition-all">
+                    {tDest('expeditionsBannerCta')} <ArrowRight size={20} className="rtl:rotate-180" />
+                  </span>
+                </div>
+              </Link>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {items.map((service) => (
+                <ServiceCard
+                  key={service.slug}
+                  title={tServices(`${service.slug}.title`)}
+                  description={tServices(`${service.slug}.shortDescription`)}
+                  href={`/services/${service.slug}`}
+                  imageSrc={service.imageSrc}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
 
       {/* Practical Guide for Foreigners */}
       <div className="bg-white py-20">

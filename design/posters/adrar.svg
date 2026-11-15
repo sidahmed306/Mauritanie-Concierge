@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140f2e"/>
+      <stop offset="0.28" stop-color="#3a1f4d"/>
+      <stop offset="0.48" stop-color="#8c3b5a"/>
+      <stop offset="0.62" stop-color="#e0704a"/>
+      <stop offset="0.72" stop-color="#f7b062"/>
+      <stop offset="0.80" stop-color="#ffd98e"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="1330" cy="610" r="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff3c4" stop-opacity="0.95"/>
+      <stop offset="0.12" stop-color="#ffd27a" stop-opacity="0.75"/>
+      <stop offset="0.4" stop-color="#ff9a52" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ff7a45" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fffbe8"/>
+      <stop offset="0.7" stop-color="#ffe7a3"/>
+      <stop offset="1" stop-color="#ffc56b"/>
+    </radialGradient>
+    <linearGradient id="mesaFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b0607a"/>
+      <stop offset="1" stop-color="#d9866f"/>
+    </linearGradient>
+    <linearGradient id="mesaMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b3352"/>
+      <stop offset="1" stop-color="#8a4552"/>
+    </linearGradient>
+    <linearGradient id="city" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1d35"/>
+      <stop offset="1" stop-color="#2a1428"/>
+    </linearGradient>
+    <linearGradient id="dune1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a24a35"/>
+      <stop offset="0.55" stop-color="#d9733f"/>
+      <stop offset="1" stop-color="#f09a52"/>
+    </linearGradient>
+    <linearGradient id="dune1Shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e2d33"/>
+      <stop offset="1" stop-color="#8c3a34"/>
+    </linearGradient>
+    <linearGradient id="dune2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2a35a"/>
+      <stop offset="0.6" stop-color="#e2803f"/>
+      <stop offset="1" stop-color="#b85a33"/>
+    </linearGradient>
+    <linearGradient id="dune2Shade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7a3030"/>
+      <stop offset="1" stop-color="#4e1e2a"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0b0614" stop-opacity="0.65"/>
+    </radialGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb56b" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffb56b" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.09"/></feComponentTransfer>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+
+    <!-- camel with rider, facing right, ground at y=100 -->
+    <symbol id="camel" viewBox="-5 -30 130 132" overflow="visible">
+      <path d="M10,55 C12,40 25,32 38,30 C45,14 62,12 70,28 C76,30 82,32 86,36 C92,30 96,22 100,16 C102,12 108,10 113,12 L119,14 C120,17 117,19 113,19 C109,22 105,30 101,42 C99,50 95,54 91,56 L93,100 L88,100 L84,63 C80,64 76,65 73,65 L75,100 L70,100 L65,66 L40,66 L39,100 L34,100 L32,66 C28,65 26,64 24,62 L23,100 L18,100 L18,62 C12,62 6,66 4,74 L2,73 C4,64 7,59 10,55 Z"/>
+      <path d="M46,24 C47,12 51,4 56,3 C61,4 64,12 66,24 Z"/>
+      <circle cx="56" cy="-2" r="5"/>
+      <path d="M50,-4 C52,-10 60,-10 62,-4 L66,-2 L50,-1 Z"/>
+      <path d="M40,30 L72,30 L74,36 L38,36 Z" opacity="0.9"/>
+    </symbol>
+    <!-- walking guide with staff -->
+    <symbol id="walker" viewBox="0 -10 40 112" overflow="visible">
+      <circle cx="20" cy="4" r="6"/>
+      <path d="M14,0 C16,-6 26,-6 27,1 L30,3 L14,3 Z"/>
+      <path d="M12,14 C14,10 26,10 28,14 L32,60 L26,60 L30,100 L25,100 L20,64 L15,100 L10,100 L13,60 L8,60 Z"/>
+      <path d="M33,10 L36,10 L38,100 L35,100 Z"/>
+    </symbol>
+    <!-- date palm -->
+    <symbol id="palm" viewBox="-60 -10 120 170" overflow="visible">
+      <path d="M-3,160 C-4,110 -2,60 2,8 L6,8 C4,60 4,110 5,160 Z"/>
+      <path d="M4,8 C-20,-6 -45,0 -58,22 C-40,6 -20,6 2,14 Z"/>
+      <path d="M4,8 C-14,-14 -36,-22 -52,-14 C-32,-14 -14,-6 2,12 Z"/>
+      <path d="M4,8 C26,-8 48,-2 60,20 C42,6 24,6 6,14 Z"/>
+      <path d="M4,8 C18,-16 40,-24 56,-14 C36,-14 20,-6 6,12 Z"/>
+      <path d="M4,8 C2,-14 8,-30 22,-36 C12,-24 8,-10 6,10 Z"/>
+      <path d="M4,8 C-6,-12 -16,-24 -30,-26 C-18,-18 -8,-6 2,10 Z"/>
+      <path d="M4,8 C-14,6 -30,20 -36,42 C-24,26 -12,18 2,14 Z"/>
+      <path d="M4,8 C22,8 36,24 40,46 C30,28 18,18 6,14 Z"/>
+    </symbol>
+    <symbol id="bird" viewBox="0 0 40 16" overflow="visible">
+      <path d="M0,10 C8,2 14,2 20,9 C26,2 32,2 40,10 C32,6 26,7 20,13 C14,7 8,6 0,10 Z"/>
+    </symbol>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <!-- stars -->
+  <g fill="#fff" opacity="0.8">
+    <circle cx="140" cy="60" r="1.6"/><circle cx="320" cy="130" r="1.1"/><circle cx="520" cy="48" r="1.4"/>
+    <circle cx="690" cy="160" r="1"/><circle cx="860" cy="70" r="1.8"/><circle cx="1040" cy="120" r="1.1"/>
+    <circle cx="1220" cy="40" r="1.3"/><circle cx="1420" cy="96" r="1"/><circle cx="1600" cy="54" r="1.6"/>
+    <circle cx="1780" cy="140" r="1.2"/><circle cx="1880" cy="40" r="1"/><circle cx="60" cy="190" r="1"/>
+    <circle cx="420" cy="220" r="0.9"/><circle cx="980" cy="230" r="0.9"/><circle cx="1700" cy="230" r="0.9"/>
+  </g>
+  <!-- sun -->
+  <rect width="1920" height="1080" fill="url(#sunGlow)"/>
+  <circle cx="1330" cy="612" r="92" fill="url(#sun)"/>
+
+  <!-- far mesas (Adrar plateau) -->
+  <path d="M0,640 L0,602 L90,598 L130,580 L330,576 L360,598 L520,600 L560,588 L760,584 L800,604 L1000,606 L1040,596 L1180,594 L1210,610 L1500,612 L1540,592 L1760,588 L1800,604 L1920,606 L1920,660 L0,660 Z" fill="url(#mesaFar)" opacity="0.9"/>
+  <!-- mid mesas -->
+  <path d="M0,700 L0,640 L60,636 L110,618 L300,612 L340,640 L420,648 L1460,660 L1520,632 L1560,624 L1760,620 L1800,640 L1920,646 L1920,720 L0,720 Z" fill="url(#mesaMid)"/>
+  <rect y="560" width="1920" height="180" fill="url(#haze)"/>
+
+  <!-- rocky hill under the ksar -->
+  <path d="M0,790 L0,700 C60,690 110,676 170,672 L230,660 C300,652 360,640 430,646 L520,650 C600,648 680,660 760,668 C860,676 960,690 1060,712 L1160,740 L1160,800 Z" fill="#4a2338"/>
+  <!-- back tier of houses (hazier) -->
+  <g fill="#5a2a44">
+    <rect x="150" y="606" width="64" height="70"/><rect x="208" y="590" width="56" height="80"/><rect x="258" y="600" width="74" height="60"/>
+    <rect x="326" y="584" width="60" height="70"/><rect x="560" y="594" width="66" height="60"/><rect x="620" y="604" width="70" height="60"/>
+    <rect x="684" y="612" width="58" height="60"/><rect x="736" y="622" width="64" height="52"/>
+    <path d="M208,590 l6,-7 l6,7 l6,-7 l6,7 l6,-7 l6,7 l6,-7 l6,7 l6,-7 l2,7 Z"/>
+    <path d="M560,594 l6,-7 l6,7 l6,-7 l6,7 l6,-7 l6,7 l6,-7 l6,7 l6,-7 l6,7 l6,-7 Z"/>
+  </g>
+  <!-- front tier + minaret -->
+  <g fill="url(#city)">
+    <path d="M0,800 L0,706 C80,694 150,690 210,688 L1100,720 L1100,800 Z"/>
+    <rect x="80" y="660" width="70" height="56"/><rect x="144" y="642" width="62" height="72"/>
+    <rect x="200" y="652" width="84" height="60"/><rect x="278" y="634" width="56" height="78"/>
+    <rect x="328" y="650" width="92" height="62"/><rect x="414" y="628" width="64" height="86"/>
+    <rect x="560" y="640" width="60" height="80"/><rect x="614" y="654" width="96" height="66"/>
+    <rect x="704" y="644" width="62" height="78"/><rect x="760" y="662" width="86" height="62"/>
+    <rect x="840" y="652" width="64" height="74"/><rect x="898" y="672" width="74" height="56"/>
+    <rect x="966" y="684" width="60" height="44"/>
+    <path d="M278,634 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l2,8 Z"/>
+    <path d="M414,628 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l4,-8 l0,8 Z"/>
+    <path d="M704,644 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l6,8 l6,-8 l2,8 Z"/>
+    <!-- Chinguetti-style minaret -->
+    <path d="M482,654 L492,500 L552,500 L562,654 Z"/>
+    <rect x="486" y="484" width="72" height="18"/>
+    <rect x="486" y="464" width="12" height="22"/><rect x="516" y="458" width="12" height="28"/><rect x="546" y="464" width="12" height="22"/>
+    <!-- mosque prayer hall beside it -->
+    <rect x="470" y="640" width="96" height="80"/>
+  </g>
+  <g fill="#fbe9c8">
+    <ellipse cx="492" cy="457" rx="6" ry="8"/><ellipse cx="522" cy="450" rx="6" ry="8"/><ellipse cx="552" cy="457" rx="6" ry="8"/>
+  </g>
+  <g fill="#ffcf7a"><rect x="516" y="530" width="12" height="20" rx="6"/><rect x="516" y="576" width="12" height="20" rx="6"/></g>
+  <!-- warm lit windows -->
+  <g fill="#ffcf7a" filter="url(#glow)" opacity="0.9">
+    <rect x="100" y="682" width="8" height="10"/><rect x="166" y="664" width="8" height="10"/><rect x="300" y="660" width="8" height="10"/>
+    <rect x="360" y="676" width="8" height="10"/><rect x="440" y="654" width="8" height="10"/><rect x="584" y="664" width="8" height="10"/>
+    <rect x="650" y="680" width="8" height="10"/><rect x="726" y="668" width="8" height="10"/><rect x="796" y="686" width="8" height="10"/>
+    <rect x="866" y="676" width="8" height="10"/><rect x="930" y="694" width="8" height="10"/><rect x="236" y="612" width="7" height="9"/>
+    <rect x="600" y="618" width="7" height="9"/>
+  </g>
+  <g fill="#ffe3a3">
+    <rect x="101" y="683" width="6" height="8"/><rect x="167" y="665" width="6" height="8"/><rect x="301" y="661" width="6" height="8"/>
+    <rect x="361" y="677" width="6" height="8"/><rect x="441" y="655" width="6" height="8"/><rect x="585" y="665" width="6" height="8"/>
+    <rect x="651" y="681" width="6" height="8"/><rect x="727" y="669" width="6" height="8"/><rect x="797" y="687" width="6" height="8"/>
+    <rect x="867" y="677" width="6" height="8"/><rect x="931" y="695" width="6" height="8"/>
+  </g>
+  <!-- palm grove -->
+  <g fill="#2a1428">
+    <use href="#palm" x="1000" y="566" width="140" height="196"/>
+    <use href="#palm" x="1070" y="596" width="110" height="160"/>
+    <use href="#palm" x="1120" y="580" width="126" height="180"/>
+    <use href="#palm" x="10" y="600" width="100" height="150"/>
+  </g>
+
+  <!-- distant dune band -->
+  <path d="M1100,760 C1250,724 1400,716 1560,724 C1720,732 1840,724 1920,716 L1920,800 L1100,800 Z" fill="#b8573f" opacity="0.9"/>
+
+  <!-- dune 1 with crest; caravan silhouetted on top -->
+  <path d="M0,840 C260,790 520,770 780,782 C1000,792 1200,760 1400,724 C1580,692 1770,698 1920,722 L1920,1080 L0,1080 Z" fill="url(#dune1)"/>
+  <!-- lee (shaded) side, to the left of the crest line -->
+  <path d="M0,840 C260,790 520,770 780,782 C1000,792 1200,760 1400,724 C1250,800 1060,850 820,880 C560,912 260,930 0,960 Z" fill="url(#dune1Shade)" opacity="0.45"/>
+  <g fill="#2a1226">
+    <use href="#walker" x="1400" y="636" width="30" height="86"/>
+    <use href="#camel" x="1440" y="616" width="120" height="112"/>
+    <use href="#camel" x="1566" y="614" width="116" height="108"/>
+    <use href="#camel" x="1690" y="620" width="110" height="104"/>
+  </g>
+  <!-- long shadows cast away from the sun (towards the viewer, right) -->
+  <g fill="#6e2a2e" opacity="0.28">
+    <path d="M1412,722 L1470,812 L1486,812 L1428,722 Z"/>
+    <path d="M1470,722 L1560,840 L1612,840 L1536,722 Z"/>
+    <path d="M1596,720 L1690,842 L1740,842 L1660,720 Z"/>
+    <path d="M1716,724 L1806,840 L1852,840 L1780,724 Z"/>
+  </g>
+
+  <!-- dune 2 foreground -->
+  <path d="M0,940 C260,870 520,850 780,890 C960,916 1120,968 1300,1080 L0,1080 Z" fill="url(#dune2)"/>
+  <path d="M780,890 C960,916 1120,968 1300,1080 L900,1080 C890,1000 850,936 780,890 Z" fill="url(#dune2Shade)" opacity="0.7"/>
+  <g fill="none" stroke="#ffd29a" stroke-opacity="0.35" stroke-width="2">
+    <path d="M60,990 C200,960 340,954 480,966"/><path d="M90,1030 C240,1000 400,996 560,1010"/>
+    <path d="M140,1066 C300,1040 470,1038 640,1052"/><path d="M1300,900 C1460,872 1640,872 1900,892"/>
+    <path d="M1360,960 C1520,936 1700,938 1920,958"/><path d="M1420,1020 C1580,998 1760,1000 1920,1016"/>
+  </g>
+
+  <!-- birds -->
+  <g fill="#2a1428" opacity="0.85">
+    <use href="#bird" x="1060" y="380" width="34" height="14"/>
+    <use href="#bird" x="1112" y="410" width="24" height="10"/>
+    <use href="#bird" x="1150" y="366" width="28" height="11"/>
+    <use href="#bird" x="1010" y="420" width="20" height="8"/>
+  </g>
+
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <rect width="1920" height="1080" filter="url(#grain)"/>
+</svg>
