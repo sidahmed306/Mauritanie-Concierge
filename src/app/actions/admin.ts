@@ -55,18 +55,3 @@ export async function deleteRequest(id: string) {
   await supabase.from('contact_requests').delete().eq('id', id);
   revalidatePath('/admin');
 }
-
-export async function updateTestimonialStatus(id: string, approved: boolean) {
-  const supabase = await requireAdmin();
-  await supabase.from('testimonials').update({ approved }).eq('id', id);
-  revalidatePath('/admin');
-  // Also revalidate the home page so the new testimonial shows up or is removed
-  revalidatePath('/', 'layout');
-}
-
-export async function deleteTestimonial(id: string) {
-  const supabase = await requireAdmin();
-  await supabase.from('testimonials').delete().eq('id', id);
-  revalidatePath('/admin');
-  revalidatePath('/', 'layout');
-}

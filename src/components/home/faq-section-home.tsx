@@ -4,24 +4,8 @@ import { useTranslations } from 'next-intl';
 
 export function FAQSectionHome() {
   const t = useTranslations('FAQ');
-  const faqs = [
-    {
-      question: "Is Mauritania safe for foreigners and investors?",
-      answer: "Yes, Mauritania is safe, especially for business travelers and tourists. The capital Nouakchott is very secure. However, having a local concierge and private driver significantly enhances your comfort, security, and ease of navigation."
-    },
-    {
-      question: "Do you provide airport pickup at Nouakchott International Airport?",
-      answer: "Absolutely. Our VIP airport pickup service includes a meet & greet, help with luggage, and a private air-conditioned vehicle waiting to transfer you to your hotel."
-    },
-    {
-      question: "Can you help business travelers and delegations?",
-      answer: "Yes, we specialize in assisting NGOs, diplomats, and investors. We coordinate your transportation, manage schedules, and provide translation services for smooth business operations."
-    },
-    {
-      question: "Do you speak English?",
-      answer: "Yes, our team provides full assistance and translation services in English, French, and Arabic."
-    }
-  ];
+  // The four questions about our three service lines + requests, in the visitor's language.
+  const faqs: { question: string; answer: string }[] = t.raw('items').slice(0, 4);
 
   return (
     <section className="py-24 bg-white relative">

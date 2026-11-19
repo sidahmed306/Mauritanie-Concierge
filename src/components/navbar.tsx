@@ -31,6 +31,7 @@ export function Navbar() {
           <Link href="/" className="hover:text-secondary transition-colors py-2">{t('home')}</Link>
           <Link href="/services#corporate" className="hover:text-secondary transition-colors py-2">{t('business')}</Link>
           <Link href="/destinations" className="hover:text-secondary transition-colors py-2">{t('tourism')}</Link>
+          <Link href="/services/intercity-transport" className="hover:text-secondary transition-colors py-2">{t('transport')}</Link>
           <Link href="/about" className="hover:text-secondary transition-colors py-2">{t('about')}</Link>
           
           <div className={`w-px h-6 mx-2 ${isScrolled ? 'bg-gray-200' : 'bg-white/20'}`}></div>
@@ -58,6 +59,7 @@ export function Navbar() {
           <Link href="/" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('home')}</Link>
           <Link href="/services#corporate" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('business')}</Link>
           <Link href="/destinations" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('tourism')}</Link>
+          <Link href="/services/intercity-transport" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('transport')}</Link>
           <Link href="/about" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('about')}</Link>
           <Link href="/faq" onClick={() => setIsOpen(false)} className="font-semibold text-lg py-2 block">{t('faq')}</Link>
           

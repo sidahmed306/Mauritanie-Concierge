@@ -1,4 +1,5 @@
-export type ServiceCategory = 'corporate' | 'tourist';
+/** 'transport' = the company's third pillar (intercity & ground transport), for travelers and business alike. */
+export type ServiceCategory = 'corporate' | 'tourist' | 'transport';
 
 export type Service = {
   slug: string;
@@ -63,10 +64,10 @@ export const servicesData: Service[] = [
     imageSrc: '/images/services/airport-transfer.png'
   },
   {
-    slug: 'interior-transport',
-    category: 'tourist',
+    slug: 'intercity-transport',
+    category: 'transport',
     iconName: 'Route',
-    imageSrc: '/images/destinations/adrar/hero.jpg'
+    imageSrc: unsplash('1494783367193-149034c05e8f')
   },
   {
     slug: 'local-guides',
@@ -94,8 +95,20 @@ export const servicesData: Service[] = [
   }
 ];
 
-export const corporateServices = servicesData.filter((s) => s.category === 'corporate');
-export const touristServices = servicesData.filter((s) => s.category === 'tourist');
+const bySlug = (slugs: string[]) =>
+  slugs.map((slug) => servicesData.find((s) => s.slug === slug)).filter((s): s is Service => Boolean(s));
+
+/** Display order of each section ('both' services appear in the two lists). */
+export const corporateServices = bySlug([
+  'corporate-airport-reception', 'nouakchott-mobility', 'intercity-transport', 'delegation-logistics',
+  'business-vip', 'business-interpretation', 'business-accommodation', 'corporate-events'
+]);
+export const transportServices = bySlug([
+  'intercity-transport', 'airport-pickup', 'private-driver', 'nouakchott-mobility'
+]);
+export const touristServices = bySlug([
+  'airport-pickup', 'intercity-transport', 'local-guides', 'private-driver', 'hotel-assistance', 'translation'
+]);
 
 /** WhatsApp number used across the site (international format, no +). */
 export const WHATSAPP_NUMBER = '22241075450';

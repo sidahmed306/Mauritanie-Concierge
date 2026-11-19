@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { pageSeo, seoKeywords } from '@/lib/seo';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { destinationsData } from '@/lib/data/destinations';
 import { DestinationCard } from '@/components/destinations/destination-card';
@@ -7,23 +8,20 @@ import { PhotoCredits } from '@/components/destinations/photo-credits';
 import { ServiceCard } from '@/components/service-card';
 import { touristServices } from '@/lib/data/services';
 
-export const metadata: Metadata = {
-  title: "Destinations | Mauritania Concierge – Adrar, Richat Structure, Banc d'Arguin, Diawling",
-  description:
-    "Five expeditions in Mauritania: Adrar and the ancient cities of Chinguetti and Ouadane, the Richat Structure (Eye of the Sahara), Banc d'Arguin National Park, Nouakchott & Nouadhibou culture, Diawling National Park and the Senegal River.",
-  keywords: [
-    'Adrar Mauritania tour', 'Chinguetti expedition', 'Ouadane', 'Richat Structure tour', 'Eye of the Sahara',
-    "Banc d'Arguin National Park", 'Diawling National Park', 'Senegal River Mauritania', 'Nouadhibou iron ore train',
-    'circuit Mauritanie', 'voyage Adrar', 'désert Mauritanie'
-  ]
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const meta = pageSeo.destinations[locale] ?? pageSeo.destinations.en;
+  return { title: meta.title, description: meta.description, keywords: seoKeywords };
+}
 
 export default async function DestinationsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Destinations');
   const tServices = await getTranslations('Services');
-  const [flagship, ...others] = destinationsData;
+  const [flagship, ...rest] = destinationsData;
+  const specials = rest.filter((d) => d.special);
+  const others = rest.filter((d) => !d.special);
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -48,9 +46,14 @@ export default async function DestinationsPage({ params }: { params: Promise<{ l
         <div className="mb-8">
           <DestinationCard destination={flagship} index={0} featured />
         </div>
+        {specials.map((d) => (
+          <div key={d.slug} className="mb-8">
+            <DestinationCard destination={d} index={destinationsData.indexOf(d)} featured />
+          </div>
+        ))}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {others.map((d, i) => (
-            <DestinationCard key={d.slug} destination={d} index={i + 1} />
+          {others.map((d) => (
+            <DestinationCard key={d.slug} destination={d} index={destinationsData.indexOf(d)} />
           ))}
         </div>
 

@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import type { Destination } from '@/lib/data/destinations';
 
@@ -34,9 +34,13 @@ export function DestinationCard({
       <div className="absolute inset-0 bg-gradient-to-t from-[#051017]/95 via-[#051017]/25 to-transparent"></div>
 
       <div className="absolute top-5 start-5 flex items-center gap-2">
-        {featured ? (
+        {featured && index === 0 ? (
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-primary text-xs font-bold uppercase tracking-wider">
             <Star size={14} className="fill-current" /> {t('flagship')}
+          </span>
+        ) : destination.special ? (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-primary text-xs font-bold uppercase tracking-wider">
+            <Sparkles size={14} className="text-secondary" /> {t('special')}
           </span>
         ) : (
           <span className="px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider">

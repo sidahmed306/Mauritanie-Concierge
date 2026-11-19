@@ -24,6 +24,7 @@ export function Footer() {
              <li><Link href="/services#corporate" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('business')}</Link></li>
              <li><Link href="/services#tourist" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('tourism')}</Link></li>
              <li><Link href="/destinations" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('destinations')}</Link></li>
+             <li><Link href="/services/intercity-transport" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('transport')}</Link></li>
              <li><Link href="/about" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('about')}</Link></li>
              <li><Link href="/faq" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{t('faq')}</Link></li>
              <li><Link href="/contact" className="hover:text-secondary transition-colors py-2 block min-h-[44px]">{tNav('contact')}</Link></li>

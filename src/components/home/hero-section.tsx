@@ -1,14 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { HeroSlideshow } from '@/components/home/hero-slideshow';
 import { heroSlides } from '@/lib/data/hero-slides';
-import { ArrowRight, Briefcase, Compass, MessageCircle } from 'lucide-react';
+import { ArrowRight, Briefcase, Compass, Route } from 'lucide-react';
 import { Link } from '@/i18n/routing';
-import { whatsappLink } from '@/lib/data/services';
 
 export function HeroSection() {
   const t = useTranslations('Hero');
-
-  const whatsappUrl = whatsappLink("Hello, I would like to inquire about your services in Mauritania.");
 
   return (
     <section className="relative min-h-screen w-full flex items-center bg-[#051017] py-24 overflow-hidden">
@@ -37,10 +34,10 @@ export function HeroSection() {
               {t('tourismBtn')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 rtl:rotate-180 transition-transform shrink-0" />
             </Link>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white px-7 py-4 rounded-xl hover:bg-[#1DA851] transition-colors font-bold text-lg flex items-center justify-center gap-3 shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] min-h-[44px]">
-              <MessageCircle className="w-5 h-5 shrink-0" />
-              {t('contactBtn')}
-            </a>
+            <Link href="/services/intercity-transport" className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white px-7 py-4 rounded-xl hover:bg-white/20 transition-colors font-bold text-lg flex items-center justify-center gap-3 min-h-[44px]">
+              <Route className="w-5 h-5 shrink-0" />
+              {t('transportBtn')}
+            </Link>
           </div>
         </div>
       </div>

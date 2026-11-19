@@ -2,7 +2,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowLeft, CalendarDays, CheckCircle2, Clock, Mail, MapPin, MessageCircle, Route, ShieldAlert, Star } from 'lucide-react';
+import { ArrowLeft, CalendarDays, CheckCircle2, Clock, Mail, MapPin, MessageCircle, Route, Sparkles, Star } from 'lucide-react';
 import { Link, routing } from '@/i18n/routing';
 import { destinationsData, getDestination } from '@/lib/data/destinations';
 import { CONTACT_EMAIL, whatsappLink } from '@/lib/data/services';
@@ -45,7 +45,6 @@ export default async function DestinationPage({ params }: { params: Promise<Para
   const name = tItem('name');
   const highlights: { title: string; desc: string }[] = tItem.raw('highlights');
   const sites: { name: string; desc: string }[] = tItem.raw('sites');
-  const onRequest = tItem.has('onRequest') ? tItem('onRequest') : null;
   const whatsappUrl = whatsappLink(t('whatsappMessage', { destination: name }));
   const others = destinationsData.filter((d) => d.slug !== slug).slice(0, 3);
 
@@ -75,6 +74,10 @@ export default async function DestinationPage({ params }: { params: Promise<Para
           {index === 0 ? (
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-primary text-xs font-bold uppercase tracking-wider mb-5">
               <Star size={14} className="fill-current" /> {t('flagship')}
+            </span>
+          ) : destination.special ? (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-primary text-xs font-bold uppercase tracking-wider mb-5">
+              <Sparkles size={14} className="text-secondary" /> {t('special')}
             </span>
           ) : (
             <span className="inline-block px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider mb-5">
@@ -115,13 +118,6 @@ export default async function DestinationPage({ params }: { params: Promise<Para
                 </li>
               ))}
             </ul>
-
-            {onRequest && (
-              <div className="mt-10 flex gap-4 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-                <ShieldAlert className="text-amber-600 shrink-0" size={24} />
-                <p className="text-amber-900 text-sm leading-relaxed">{onRequest}</p>
-              </div>
-            )}
           </div>
 
           <aside>

@@ -26,22 +26,9 @@ export function DestinationsSection() {
           <div className="lg:col-span-2 lg:row-span-2">
             <DestinationCard destination={flagship} index={0} featured />
           </div>
-          {others.slice(0, 2).map((d, i) => (
-            <DestinationCard key={d.slug} destination={d} index={i + 1} />
+          {others.map((d) => (
+            <DestinationCard key={d.slug} destination={d} index={destinationsData.indexOf(d)} />
           ))}
-          {others.slice(2).map((d, i) => (
-            <DestinationCard key={d.slug} destination={d} index={i + 3} />
-          ))}
-          <Link
-            href="/destinations"
-            className="group flex flex-col justify-end rounded-3xl bg-primary p-8 md:p-9 min-h-[420px] hover:bg-[#0f2a3e] transition-colors"
-          >
-            <p className="text-secondary font-bold tracking-widest uppercase text-xs mb-4">{t('tag')}</p>
-            <h4 className="text-2xl md:text-3xl font-bold text-white mb-4">{t('title')}</h4>
-            <span className="inline-flex items-center gap-2 font-bold text-secondary group-hover:gap-3 transition-all">
-              {t('viewAll')} <ArrowRight size={20} className="rtl:rotate-180" />
-            </span>
-          </Link>
         </div>
       </div>
     </section>

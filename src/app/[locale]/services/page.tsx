@@ -1,22 +1,20 @@
 import { ServiceCard } from '@/components/service-card';
-import { corporateServices, touristServices, whatsappLink } from '@/lib/data/services';
+import { corporateServices, touristServices, transportServices, whatsappLink } from '@/lib/data/services';
+import { IntercityBand } from '@/components/intercity-band';
+import { Fragment } from 'react';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { Briefcase, Compass, MessageCircle } from 'lucide-react';
+import { Briefcase, Compass, MessageCircle, Route } from 'lucide-react';
 import type { Metadata } from 'next';
+import { pageSeo, seoKeywords } from '@/lib/seo';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: "Services | Mauritania Concierge – Corporate Mobility, Delegations, Airport Pickup & Desert Tours",
-  description: "Corporate services (VIP airport reception, chauffeurs in Nouakchott, delegation logistics, business interpretation) and tourist services (airport pickup, transport across Mauritania, desert tours Chinguetti) in Mauritania.",
-  keywords: [
-    "corporate transport Nouakchott", "delegation logistics Mauritania", "business travel Mauritania",
-    "services tourisme Mauritanie", "airport pickup Nouakchott", "chauffeur privé Mauritanie",
-    "visa Mauritanie étranger", "guide pratique Mauritanie", "sécurité Mauritanie touriste",
-    "tourisme Mauritanie", "safari désert Mauritanie", "Chinguetti tour"
-  ],
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const meta = pageSeo.services[locale] ?? pageSeo.services.en;
+  return { title: meta.title, description: meta.description, keywords: seoKeywords };
+}
 
 export default async function ServicesPage({ params }: { params: Promise<{locale: string}> }) {
   const {locale} = await params;
@@ -31,7 +29,8 @@ export default async function ServicesPage({ params }: { params: Promise<{locale
 
   const categories = [
     { key: 'corporate' as const, icon: Briefcase, items: corporateServices, bg: 'bg-gray-50' },
-    { key: 'tourist' as const, icon: Compass, items: touristServices, bg: 'bg-white' }
+    { key: 'tourist' as const, icon: Compass, items: touristServices, bg: 'bg-white' },
+    { key: 'transport' as const, icon: Route, items: transportServices, bg: 'bg-gray-50' }
   ];
 
   const practicalGuide = [
@@ -92,7 +91,10 @@ export default async function ServicesPage({ params }: { params: Promise<{locale
 
       {/* Service categories */}
       {categories.map(({ key, icon: Icon, items, bg }) => (
-        <section key={key} id={key} className={`${bg} py-20 scroll-mt-24`}>
+        <Fragment key={key}>
+        {/* the transport pillar opens with the routes band (it carries the #transport anchor) */}
+        {key === 'transport' && <IntercityBand />}
+        <section id={key === 'transport' ? 'transport-services' : key} className={`${bg} py-20 scroll-mt-24`}>
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex items-start gap-5 mb-12 max-w-3xl">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary text-secondary shrink-0">
@@ -131,6 +133,7 @@ export default async function ServicesPage({ params }: { params: Promise<{locale
             </div>
           </div>
         </section>
+        </Fragment>
       ))}
 
       {/* Practical Guide for Foreigners */}

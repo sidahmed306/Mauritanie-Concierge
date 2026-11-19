@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { ArrowRight, Briefcase, CheckCircle2, Compass } from 'lucide-react';
+import { ArrowRight, Briefcase, CheckCircle2, Compass, Route } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 
 const paths = [
@@ -17,6 +17,13 @@ const paths = [
     icon: Compass,
     imageSrc: '/images/destinations/adrar/chinguetti-minaret.jpg',
     imageAlt: 'The minaret of the Chinguetti mosque at sunset'
+  },
+  {
+    key: 'transport',
+    href: '/services/intercity-transport',
+    icon: Route,
+    imageSrc: 'https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'A road crossing the desert'
   }
 ] as const;
 
@@ -28,10 +35,11 @@ export function AudiencePaths() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-secondary font-bold tracking-widest uppercase text-sm mb-4">{t('tag')}</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-primary">{t('title')}</h3>
+          <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">{t('title')}</h3>
+          <p className="text-gray-600 text-lg">{t('subtitle')}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {paths.map(({ key, href, icon: Icon, imageSrc, imageAlt }) => {
             const points: string[] = t.raw(`${key}Points`);
             return (
@@ -53,9 +61,9 @@ export function AudiencePaths() {
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary text-primary mb-6">
                     <Icon size={28} />
                   </div>
-                  <h4 className="text-3xl md:text-4xl font-bold text-white mb-3">{t(`${key}Title`)}</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">{t(`${key}Title`)}</h4>
                   <p className="text-white/80 text-lg mb-6 max-w-xl">{t(`${key}Desc`)}</p>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
+                  <ul className="grid grid-cols-1 gap-y-2 mb-8">
                     {points.map((point) => (
                       <li key={point} className="flex items-center gap-2 text-white/90 text-sm">
                         <CheckCircle2 size={16} className="text-secondary shrink-0" />
@@ -70,6 +78,11 @@ export function AudiencePaths() {
               </Link>
             );
           })}
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-secondary/30 bg-secondary/5 px-6 py-8 md:px-10 text-center max-w-4xl mx-auto">
+          <p className="text-primary text-lg md:text-xl font-semibold leading-relaxed">{t('pledge')}</p>
+          <p className="text-gray-600 mt-3">{t('pledgeRequest')}</p>
         </div>
       </div>
     </section>

@@ -10,10 +10,11 @@
     "faq": "FAQ",
     "business": "Business",
     "tourism": "Tourism",
-    "destinations": "Destinations"
+    "destinations": "Destinations",
+    "transport": "Transport"
   },
   "Footer": {
-    "description": "Mobility and concierge partner in Mauritania. Corporate airport reception, transportation in Nouakchott and across the country, delegation services and tours for international clients and travelers.",
+    "description": "Mauritania Concierge provides three active service lines with the same dedication: tourist expeditions, business delegations in Nouakchott and nationwide, and intercity transport between all cities. Anything else on request: rentals, interpreters, guides, accommodation.",
     "links": "Quick Links",
     "contact": "Contact Us",
     "rights": "All rights reserved. Mauritania Concierge.",
@@ -23,15 +24,15 @@
     "business": "Business Services",
     "tourism": "Tourist Services",
     "destinations": "Destinations",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "transport": "Intercity Transport"
   },
   "Hero": {
-    "title": "Your Mobility & Concierge Partner",
+    "title": "Your Travel & Business Partner",
     "titleBreak": "in Mauritania",
-    "subtitle": "From the airport to the desert cities: transportation, delegation services and travel assistance for international corporations and travelers.",
-    "contactBtn": "Contact on WhatsApp",
+    "subtitle": "Tourist expeditions, business delegations and intercity transport across Mauritania, with the same dedication for every client, and anything else you need on request.",
     "exploreBtn": "Explore Services",
-    "tag": "Corporate Mobility · Delegations · Travel",
+    "tag": "Tourist Expeditions · Business Delegations · Intercity Transport",
     "businessBtn": "Business Services",
     "tourismBtn": "Discover Mauritania",
     "slides": [
@@ -42,7 +43,8 @@
       "Terjit oasis, Adrar",
       "Trusted by international corporations",
       "The dunes of Mauritania"
-    ]
+    ],
+    "transportBtn": "Intercity Transport"
   },
   "ServicesOverview": {
     "tag": "Our Services",
@@ -185,19 +187,6 @@
         "On-Site Assistance"
       ]
     },
-    "interior-transport": {
-      "title": "Transport Across Mauritania",
-      "shortDescription": "Private 4x4 transport to Chinguetti, Ouadane, Atar, Terjit, Banc d’Arguin and beyond.",
-      "fullDescription": "Travel safely across the country with experienced drivers who know every road and desert track. We take you to the historic cities of Chinguetti and Ouadane, the Adrar, the Terjit oasis, the Banc d’Arguin and Nouadhibou, with flexible itineraries built around your trip.",
-      "benefits": [
-        "4x4 With Experienced Drivers",
-        "Historic Cities",
-        "Desert Routes",
-        "Coastal Trips",
-        "Flexible Itineraries",
-        "Door-to-Door"
-      ]
-    },
     "local-guides": {
       "title": "Local Guides",
       "shortDescription": "Passionate local guides who bring the cities, the desert and the culture of Mauritania to life.",
@@ -208,6 +197,21 @@
         "History & Culture",
         "Desert & Nature Expertise",
         "Private or Group Visits"
+      ]
+    },
+    "intercity-transport": {
+      "title": "Intercity Transport",
+      "shortDescription": "From Nouakchott to Nouadhibou, Atar, Rosso, Kiffa and every city in Mauritania: comfortable transport with a professional driver.",
+      "fullDescription": "Travel between cities safely and on your schedule. Whether you are a delegation heading to Nouadhibou, a team visiting a project site or travelers on their way to the Adrar, we provide the right vehicle with an experienced driver, door to door, one way or return, for one person or a whole group.",
+      "benefits": [
+        "Nouakchott ↔ Nouadhibou",
+        "Nouakchott ↔ Atar & the Adrar",
+        "Rosso, Kaédi, Kiffa, Néma, Zouérat…",
+        "Door-to-door, one way or return",
+        "Sedan, 4x4 or minibus on request",
+        "Experienced long-distance drivers",
+        "For travelers and business teams",
+        "Corporate invoicing"
       ]
     }
   },
@@ -223,12 +227,13 @@
     "categoryTourist": "Tourist Service",
     "whatsappMessage": "Hello, I am interested in the \"{service}\" service. My dates: ",
     "emailBtn": "Or send an email",
-    "relatedTitle": "Related Services"
+    "relatedTitle": "Related Services",
+    "categoryTransport": "Transport"
   },
   "ServicesOverviewPage": {
     "tag": "Our Services",
-    "title": "Corporate Services & Tourist Services",
-    "subtitle": "Two dedicated service lines: one for international corporations and delegations, one for travelers discovering Mauritania."
+    "title": "Business, Tourism & Transport",
+    "subtitle": "Three service lines: business delegations in the capital and nationwide, tourist expeditions and services, and transport between all the cities of Mauritania."
   },
   "About": {
     "tag": "Our Story",
@@ -280,6 +285,22 @@
     "pageSubtitle": "We have compiled answers to the questions we commonly receive from foreigners arriving in Mauritania.",
     "items": [
       {
+        "question": "What services does Mauritania Concierge provide?",
+        "answer": "Mauritania Concierge runs three fully active service lines with the same attention and dedication: tourist expeditions across Mauritania (Adrar, the iron ore train, the Richat Structure, the Banc d’Arguin…), business delegation services in Nouakchott and nationwide, and intercity transport between all cities of Mauritania. We also arrange anything else on request."
+      },
+      {
+        "question": "Do you provide intercity transport in Mauritania?",
+        "answer": "Yes. We drive travelers and business teams between all cities of Mauritania: Nouakchott, Nouadhibou, Atar, Rosso, Kiffa, Kaédi, Néma, Zouérat and more, door to door, one way or return, with a sedan, a 4x4 or a minibus and a professional driver."
+      },
+      {
+        "question": "Can you arrange something that is not listed on the website?",
+        "answer": "Yes. Tell us what you need and we arrange it: vehicle rental with driver, apartment or villa rental, interpreters, local guides, SIM cards, meeting rooms, appointments, event logistics or a last-minute change. Contact us on WhatsApp or by email."
+      },
+      {
+        "question": "Do you organize tourist expeditions in Mauritania?",
+        "answer": "Yes. We organize six signature expeditions: the Adrar and its ancient cities, the iron ore train, the Richat Structure, the Banc d’Arguin National Park, the culture of Nouakchott and Nouadhibou, and Diawling National Park with the Senegal River, with vehicles, drivers and guides."
+      },
+      {
         "question": "Is Mauritania safe for foreigners and investors?",
         "answer": "Yes, Mauritania is safe, especially for business travelers and tourists. The capital Nouakchott is very secure. However, having a local concierge and private driver significantly enhances your comfort, security, and ease of navigation."
       },
@@ -297,50 +318,39 @@
       }
     ]
   },
-  "Testimonials": {
-    "tag": "Testimonials",
-    "title": "Trusted by International Delegations",
-    "subtitle": "Read what our clients have to say about their experience with our premium concierge services in Mauritania.",
-    "items": [
-      {
-        "name": "Jean-Pierre Laurent",
-        "country": "France",
-        "review": "The airport pickup and VIP assistance provided a seamless experience for our entire delegation. Highly professional and deeply trustworthy."
-      },
-      {
-        "name": "Ahmed Al-Mansoori",
-        "country": "UAE",
-        "review": "Excellent service from start to finish. The private driver was punctual and the translation services made our business meetings highly successful."
-      },
-      {
-        "name": "Sarah Jenkins",
-        "country": "United States",
-        "review": "As an investor visiting Mauritania for the first time, Mauritania Concierge made everything incredibly easy and secure. The hotel assistance was top tier."
-      }
-    ],
-    "summary": "{average} / 5 · based on {count} verified reviews"
-  },
   "AudiencePaths": {
-    "tag": "Two Ways to Travel With Us",
-    "title": "Who Are You Traveling As?",
+    "tag": "Three Ways We Serve You",
+    "title": "What Brings You to Mauritania?",
     "businessTitle": "Traveling for Business",
     "businessDesc": "Corporate clients, investors and government delegations. Punctual, discreet and fully coordinated from arrival to departure.",
     "businessPoints": [
       "VIP airport reception",
-      "Mobility in Nouakchott",
-      "Delegation logistics",
-      "Business interpretation"
+      "Chauffeurs in Nouakchott",
+      "Intercity transport",
+      "Delegations & interpreters"
     ],
     "businessCta": "Corporate Services",
     "touristTitle": "Discovering Mauritania",
     "touristDesc": "Travelers and explorers. Desert expeditions, historic cities and seamless transport across the country.",
     "touristPoints": [
-      "Airport pickup",
-      "Chinguetti, Ouadane, Atar & Terjit",
-      "Desert tours by 4x4",
-      "Hotel assistance"
+      "Six signature expeditions",
+      "The iron ore train",
+      "Intercity transport",
+      "Airport pickup & local guides"
     ],
-    "touristCta": "Discover the Expeditions"
+    "touristCta": "Discover the Expeditions",
+    "transportTitle": "Getting Around the Country",
+    "transportDesc": "Comfortable, reliable transport between every city in Mauritania, with professional drivers.",
+    "transportPoints": [
+      "Nouakchott ↔ Nouadhibou",
+      "Nouakchott ↔ Atar & the Adrar",
+      "Rosso, Kiffa, Kaédi, Zouérat…",
+      "Any vehicle, on request"
+    ],
+    "transportCta": "Intercity Transport",
+    "subtitle": "Mauritania Concierge runs three fully active service lines: tourist expeditions, business delegations and intercity transport.",
+    "pledge": "All three service lines are fully active. Whatever brings you to Mauritania, you get the same team, the same attention and the same dedication.",
+    "pledgeRequest": "And if you need anything else, from vehicle or apartment rental to an interpreter or a last-minute appointment, just ask: we arrange it."
   },
   "TrustedBy": {
     "tag": "Internationally Recognized",
@@ -439,14 +449,14 @@
     "requestsSubtitle": "Our clients ask us for all kinds of things, from a driver at 4 a.m. to a full delegation programme. Here are a few examples. The list does not stop here.",
     "requests": [
       "VIP airport welcome",
-      "A car with driver",
+      "Vehicle rental with driver",
+      "A trip to another city",
       "An interpreter for a meeting",
-      "A hotel or an apartment",
+      "Apartment or villa rental",
       "A local SIM card",
       "A meeting room",
       "A night in a desert camp",
       "A local guide",
-      "A restaurant reservation",
       "Appointments and site visits",
       "Logistics for a whole delegation",
       "A last-minute change"
@@ -481,15 +491,18 @@
     "corporateSubtitle": "Airport reception, mobility in the capital and full delegation support for international companies, investors and government missions.",
     "touristTag": "For Travelers",
     "touristTitle": "Tourist Services",
-    "touristSubtitle": "Airport pickup, transport across the country, desert tours and assistance to discover Mauritania with peace of mind."
+    "touristSubtitle": "Airport pickup, intercity transport, local guides, drivers and assistance to discover Mauritania with peace of mind.",
+    "transportTag": "Nationwide",
+    "transportTitle": "Transport Services",
+    "transportSubtitle": "Intercity transport, airport transfers and drivers, for travelers and business teams alike."
   },
   "Destinations": {
     "tag": "Expeditions",
     "title": "Where the Desert Whispers Its Oldest Stories",
-    "subtitle": "Follow the ancient caravan roads to cities of stone and starlight. Watch a giant eye open in the heart of the Sahara, see a million wings rise above the Atlantic, share three glasses of tea on a golden shore, and drift along the river where Mauritania turns green. Five journeys, one land that never leaves you.",
+    "subtitle": "Follow the ancient caravan roads to cities of stone and starlight. Ride through the night on a train of iron across the Sahara, watch a giant eye open in the heart of the desert, see a million wings rise above the Atlantic, share three glasses of tea on a golden shore, and drift along the river where Mauritania turns green. Six journeys, one land that never leaves you.",
     "homeTag": "Destinations",
     "homeTitle": "Where Will Your Expedition Take You?",
-    "homeSubtitle": "Five signature expeditions, from the desert to the Atlantic and the river.",
+    "homeSubtitle": "Six signature expeditions, from the desert to the Atlantic and the river.",
     "viewAll": "All Destinations",
     "flagship": "Flagship Expedition",
     "expedition": "Expedition {number}",
@@ -548,13 +561,12 @@
           },
           {
             "name": "Tichitt & Oualata",
-            "desc": "Remote ksour famous for their decorated architecture, on request with a tailored security plan."
+            "desc": "Remote ksour famous for their decorated architecture, on request."
           }
         ],
         "bestSeason": "November to March",
         "duration": "5 to 10 days",
-        "access": "About 450 km from Nouakchott to Atar by road, then 4x4 tracks.",
-        "onRequest": "Tichitt and Oualata lie in the far east of the country. Several governments currently advise against travel there, so we organize these visits only on request, with a tailored security plan."
+        "access": "About 450 km from Nouakchott to Atar by road, then 4x4 tracks."
       },
       "richat-structure": {
         "name": "Richat Structure, the Eye of the Sahara",
@@ -707,13 +719,75 @@
         "bestSeason": "November to March",
         "duration": "2 to 4 days",
         "access": "About 200 km south of Nouakchott to Rosso, then tracks into the park."
+      },
+      "iron-ore-train": {
+        "name": "The Iron Ore Train",
+        "tagline": "A night aboard one of the longest trains in the world",
+        "short": "Ride the legendary Sahara train between Zouérat and Nouadhibou: up to 2.5 km of wagons, around 700 km of desert and a sky full of stars.",
+        "intro": "Every day, one of the longest and heaviest trains on Earth leaves the iron mines of Zouérat and crosses the Sahara to the port of Nouadhibou: around 700 km of desert and up to 2.5 km of wagons. For travelers it is a legend: climbing onto an ore wagon at Choum, watching the dunes roll by, sharing tea with fellow passengers and falling asleep under the stars. We turn this raw adventure into a safe, well-organized experience.",
+        "highlights": [
+          {
+            "title": "A Legendary Ride",
+            "desc": "One of the longest trains in the world, a journey travelers talk about for the rest of their lives."
+          },
+          {
+            "title": "The Sahara by Night",
+            "desc": "Sunset over the dunes, a sky full of stars and sunrise from the top of a wagon."
+          },
+          {
+            "title": "Prepared & Accompanied",
+            "desc": "An experienced guide, water and meals, blankets for the night and transfers at both ends."
+          }
+        ],
+        "sites": [
+          {
+            "name": "Choum",
+            "desc": "The desert station where travelers coming from the Adrar board the train."
+          },
+          {
+            "name": "The open Sahara",
+            "desc": "Hours of dunes, stony plains and plateaus with no road in sight."
+          },
+          {
+            "name": "Nouadhibou",
+            "desc": "Arrival on the Atlantic coast, gateway to Cap Blanc and the Banc d’Arguin."
+          },
+          {
+            "name": "Zouérat",
+            "desc": "The mining town where the train begins its journey, on request."
+          }
+        ],
+        "bestSeason": "November to March (cold nights: bring warm clothes)",
+        "duration": "2 to 4 days, including transfers",
+        "access": "Board at Choum, about 2 hours from Atar, or at Nouadhibou for the journey inland."
       }
     },
     "servicesTag": "For Your Journey",
     "servicesTitle": "Tourist Services",
     "servicesSubtitle": "Around every expedition, we take care of the rest: your arrival, your transport, your stay and the people who will guide you.",
-    "expeditionsBannerTitle": "Start with our five expeditions",
-    "expeditionsBannerDesc": "Adrar, the Eye of the Sahara, the Banc d’Arguin, the culture of Nouakchott and Nouadhibou, the Senegal River.",
-    "expeditionsBannerCta": "Discover the Expeditions"
+    "expeditionsBannerTitle": "Start with our six expeditions",
+    "expeditionsBannerDesc": "Adrar, the iron ore train, the Eye of the Sahara, the Banc d’Arguin, the culture of Nouakchott and Nouadhibou, the Senegal River.",
+    "expeditionsBannerCta": "Discover the Expeditions",
+    "special": "Signature Experience"
+  },
+  "Transport": {
+    "tag": "Intercity Transport",
+    "title": "From Nouakchott to Every City in Mauritania",
+    "subtitle": "Travelers or business teams, one person or a whole delegation: we drive you between cities safely, comfortably and on your schedule, door to door.",
+    "routesTitle": "Our most requested routes",
+    "routes": [
+      "Nouakchott ↔ Nouadhibou",
+      "Nouakchott ↔ Atar",
+      "Nouakchott ↔ Rosso",
+      "Nouakchott ↔ Kiffa",
+      "Nouakchott ↔ Kaédi",
+      "Nouakchott ↔ Néma",
+      "Atar ↔ Chinguetti & Ouadane",
+      "Nouadhibou ↔ Zouérat"
+    ],
+    "note": "And any other city in the country, one way or return, on request.",
+    "cta": "Book a Trip",
+    "details": "Service Details",
+    "whatsappMessage": "Hello, I need intercity transport in Mauritania. From: , to: , date: , travelers: "
   }
 }

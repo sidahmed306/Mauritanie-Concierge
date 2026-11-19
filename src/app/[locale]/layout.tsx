@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { SITE_URL, seoFor, seoKeywords } from '@/lib/seo';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 import { Navbar } from '@/components/navbar';
@@ -17,28 +18,19 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const titles: Record<string, string> = {
-    en: 'Mauritania Concierge | Premium VIP Assistance & Private Drivers',
-    fr: 'Mauritania Concierge | Assistance VIP, Chauffeurs Privés',
-    ar: 'كونسيرج موريتانيا | مساعدة كبار الشخصيات والسائقين الخاصين'
-  };
-  const descriptions: Record<string, string> = {
-    en: 'Premium concierge service in Mauritania. VIP airport pickup, private drivers, hotel assistance in Nouakchott.',
-    fr: 'Le service de conciergerie premium en Mauritanie. Accueil aéroport VIP, chauffeurs privés à Nouakchott.',
-    ar: 'خدمات الكونسيرج المميزة في موريتانيا. استقبال المطار لكبار الشخصيات والسائقين الخاصين في نواكشوط.'
-  };
+  const meta = seoFor(locale);
   return {
-    metadataBase: new URL('https://mauritanieconcierge.com'),
-    title: titles[locale] || titles['en'],
-    description: descriptions[locale] || descriptions['en'],
-    keywords: ['Mauritania airport pickup', 'Mauritania concierge', 'Private driver Mauritania', 'Nouakchott airport transfer', 'Mauritania VIP services'],
+    metadataBase: new URL(SITE_URL),
+    title: meta.title,
+    description: meta.description,
+    keywords: seoKeywords,
     verification: {
       google: 'xzrS9yCqIBiis_ZCPf6H8NPelSfKIlInScRKEtzUoyg',
     },
     openGraph: {
       type: 'website',
       locale,
-      url: 'https://mauritanieconcierge.com',
+      url: `${SITE_URL}/${locale}`,
       siteName: 'Mauritania Concierge',
     }
   };

@@ -1,9 +1,10 @@
+import { SITE_URL } from '@/lib/seo'
 import { MetadataRoute } from 'next'
 import { servicesData } from '@/lib/data/services'
 import { destinationsData } from '@/lib/data/destinations'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mauritanieconcierge.com'
+  const baseUrl = SITE_URL
   const locales = ['en', 'fr', 'ar']
   const pages = ['', '/services', '/contact', '/about', '/faq', ...servicesData.map(s => `/services/${s.slug}`), '/destinations', ...destinationsData.map(d => `/destinations/${d.slug}`)]
 

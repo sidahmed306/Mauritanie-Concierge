@@ -12,6 +12,8 @@ export type Photo = { src: string; alt: string; author: string; license: string;
 
 export type Destination = {
   slug: string;
+  /** Highlighted as a "signature experience" right after the flagship. */
+  special?: boolean;
   hero: Photo;
   gallery: Photo[];
 };
@@ -29,6 +31,19 @@ export const destinationsData: Destination[] = [
       { src: "/images/destinations/adrar/04.jpg", alt: "Ruins of the ancient city of Ouadane", author: "Jah Abdul", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:L%27ancienne_ville_de_Ouadane.jpg" },
       { src: "/images/destinations/adrar/05.jpg", alt: "Palm grove of the Terjit oasis", author: "Jah Abdul", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Terjite.jpg" },
       { src: "/images/destinations/adrar/08.jpg", alt: "The mosque of Tichitt", author: "Wilson McMakin", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:The_Mosque_of_Tichitt.jpg" },
+    ]
+  },
+  {
+    slug: 'iron-ore-train',
+    special: true,
+    hero: { src: "/images/destinations/iron-ore-train/traveler-on-train.jpg", alt: "A traveler riding on top of the iron ore train", author: "Mehdibelhaj", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:%D8%B3%D8%B7%D8%AD_%D8%A7%D8%B7%D9%88%D9%84_%D9%82%D8%B7%D8%A7%D8%B1_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85.jpg" },
+    gallery: [
+      { src: "/images/destinations/iron-ore-train/hero.jpg", alt: "The iron ore train crossing the desert at sunset", author: "Jah Abdul", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Train_Choum.jpg" },
+      { src: "/images/destinations/iron-ore-train/02.jpg", alt: "Riding an ore wagon through the dunes", author: "Mehdibelhaj", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:%D8%B9%D9%84%D9%89_%D8%B3%D8%B7%D8%AD_%D8%A7%D8%B7%D9%88%D9%84_%D9%82%D8%B7%D8%A7%D8%B1_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85_%D9%85%D9%88%D8%B1%D9%8A%D8%AA%D8%A7%D9%86%D9%8A%D8%A7.jpg" },
+      { src: "/images/destinations/iron-ore-train/03.jpg", alt: "Travelers loading a wagon at Choum station", author: "Ben Kawam", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Iron_Ore_Train_-_Choum,_Mauritania.jpg" },
+      { src: "/images/destinations/iron-ore-train/04.jpg", alt: "Sunrise from an ore wagon", author: "Ammar Hassan", license: "CC BY 2.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Mauritania_Railway_at_sunrise.jpg" },
+      { src: "/images/destinations/iron-ore-train/05.jpg", alt: "The train passing below the cliffs near Choum", author: "Fischersfritzchen", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Erzzug_Choum.jpg" },
+      { src: "/images/destinations/iron-ore-train/06.jpg", alt: "Passengers and cargo on top of the train", author: "Mehdibelhaj", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:%D8%B9%D9%84%D9%89_%D8%B3%D8%B7%D8%AD_%D8%A7%D8%B7%D9%88%D9%84_%D9%82%D8%B7%D8%A7%D8%B1_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85.jpg" },
     ]
   },
   {

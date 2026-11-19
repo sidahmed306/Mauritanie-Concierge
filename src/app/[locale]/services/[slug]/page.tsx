@@ -1,8 +1,8 @@
 import { notFound, permanentRedirect } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { servicesData, whatsappLink, CONTACT_EMAIL } from '@/lib/data/services';
+import { servicesData, corporateServices, touristServices, transportServices, whatsappLink, CONTACT_EMAIL } from '@/lib/data/services';
 import Image from 'next/image';
-import { CheckCircle2, MessageCircle, ArrowLeft, Mail, Briefcase, Compass } from 'lucide-react';
+import { CheckCircle2, MessageCircle, ArrowLeft, Mail, Briefcase, Compass, Route } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { ServiceCard } from '@/components/service-card';
 
@@ -27,6 +27,8 @@ export default async function ServiceDetailsPage({
 
   // The former generic "Tourism & Desert Tours" service is now the expeditions page.
   if (slug === 'tourism') permanentRedirect(`/${locale}/destinations`);
+  // "Transport Across Mauritania" became the intercity transport service (business + travel).
+  if (slug === 'interior-transport') permanentRedirect(`/${locale}/services/intercity-transport`);
 
   const service = servicesData.find((s) => s.slug === slug);
   if (!service) {
@@ -43,10 +45,11 @@ export default async function ServiceDetailsPage({
   const tServices = await getTranslations('Services');
   const whatsappUrl = whatsappLink(t('whatsappMessage', { service: title }));
   const isCorporate = service.category === 'corporate';
-  const CategoryIcon = isCorporate ? Briefcase : Compass;
-  const related = servicesData
-    .filter((s) => s.category === service.category && s.slug !== service.slug)
-    .slice(0, 3);
+  const isTransport = service.category === 'transport';
+  const CategoryIcon = isTransport ? Route : isCorporate ? Briefcase : Compass;
+  const categoryLabel = isTransport ? t('categoryTransport') : isCorporate ? t('categoryCorporate') : t('categoryTourist');
+  const relatedPool = isTransport ? transportServices : isCorporate ? corporateServices : touristServices;
+  const related = relatedPool.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   return (
     <main className="min-h-screen pb-24 bg-white">
@@ -59,7 +62,7 @@ export default async function ServiceDetailsPage({
             <ArrowLeft size={20} className="rtl:rotate-180" /> {t('backToServices')}
           </Link>
           <span className="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full bg-secondary text-primary text-sm font-bold mb-4">
-            <CategoryIcon size={16} /> {isCorporate ? t('categoryCorporate') : t('categoryTourist')}
+            <CategoryIcon size={16} /> {categoryLabel}
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">{title}</h1>
         </div>

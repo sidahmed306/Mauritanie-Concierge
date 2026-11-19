@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import {
   BedDouble, Building2, CalendarDays, CarFront, Clock, Compass, Languages, MapPin, MessageCircle,
-  PlaneLanding, Presentation, Settings2, Smartphone, Tent, Users, UtensilsCrossed
+  PlaneLanding, Presentation, Route, Settings2, Smartphone, Tent, Users
 } from 'lucide-react';
 import Image from 'next/image';
 import { whatsappLink } from '@/lib/data/services';
@@ -9,7 +9,7 @@ import { vehicleExamples } from '@/lib/data/vehicles';
 import { PhotoCredits } from '@/components/destinations/photo-credits';
 
 const icons = [Users, MapPin, CalendarDays, Settings2];
-const requestIcons = [PlaneLanding, CarFront, Languages, BedDouble, Smartphone, Presentation, Tent, Compass, UtensilsCrossed, Building2, Users, Clock];
+const requestIcons = [PlaneLanding, CarFront, Route, Languages, BedDouble, Smartphone, Presentation, Tent, Compass, Building2, Users, Clock];
 
 /** "Any vehicle, on request": we don't present a fleet, the client tells us what they need. */
 export function OnRequestSection() {
