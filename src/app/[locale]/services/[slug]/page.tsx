@@ -5,6 +5,25 @@ import Image from 'next/image';
 import { CheckCircle2, MessageCircle, ArrowLeft, Mail, Briefcase, Compass, Route } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { ServiceCard } from '@/components/service-card';
+import type { Metadata } from 'next';
+import { alternatesFor, serviceSeo } from '@/lib/seo';
+
+/** Each service gets its own title/description/canonical (before, they all reused the homepage title). */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  if (!servicesData.some((s) => s.slug === slug)) return {};
+  const custom = serviceSeo[slug]?.[locale];
+  const t = await getTranslations({ locale, namespace: `Services.${slug}` });
+  const where = locale === 'fr' ? 'en Mauritanie' : locale === 'ar' ? 'في موريتانيا' : 'in Mauritania';
+  const title = custom?.title ?? `${t('title')} ${where} | Mauritania Concierge`;
+  const description = custom?.description ?? t('shortDescription');
+  return {
+    title,
+    description,
+    alternates: alternatesFor(locale, `/services/${slug}`),
+    openGraph: { title, description, url: alternatesFor(locale, `/services/${slug}`).canonical, siteName: 'Mauritania Concierge', locale, type: 'website' }
+  };
+}
 
 export function generateStaticParams() {
   const params: { locale: string, slug: string }[] = [];

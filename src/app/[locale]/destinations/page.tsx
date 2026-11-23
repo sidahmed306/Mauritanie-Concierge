@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { pageSeo, seoKeywords } from '@/lib/seo';
+import { pageSeo, seoKeywords, alternatesFor } from '@/lib/seo';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { destinationsData } from '@/lib/data/destinations';
 import { DestinationCard } from '@/components/destinations/destination-card';
@@ -11,7 +11,7 @@ import { touristServices } from '@/lib/data/services';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const meta = pageSeo.destinations[locale] ?? pageSeo.destinations.en;
-  return { title: meta.title, description: meta.description, keywords: seoKeywords };
+  return { title: meta.title, description: meta.description, keywords: seoKeywords, alternates: alternatesFor(locale, '/destinations') };
 }
 
 export default async function DestinationsPage({ params }: { params: Promise<{ locale: string }> }) {

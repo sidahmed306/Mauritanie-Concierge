@@ -10,7 +10,7 @@ import { DestinationsSection } from '@/components/home/destinations-section';
 import { setRequestLocale } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
-import { SITE_URL, seoFor, seoKeywords } from '@/lib/seo';
+import { SITE_URL, seoFor, seoKeywords, alternatesFor } from '@/lib/seo';
 
 const FAQSectionHome = dynamic(() => import('@/components/home/faq-section-home').then(mod => mod.FAQSectionHome), {
   loading: () => <div className="h-96 w-full animate-pulse bg-white"></div>
@@ -29,10 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: meta.title,
     description: meta.description,
     keywords: seoKeywords,
-    alternates: {
-      canonical: `${SITE_URL}/${locale}`,
-      languages: { en: `${SITE_URL}/en`, fr: `${SITE_URL}/fr`, ar: `${SITE_URL}/ar` }
-    },
+    alternates: alternatesFor(locale, ''),
     openGraph: {
       title: meta.title,
       description: meta.ogDescription,

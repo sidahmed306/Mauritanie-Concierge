@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Briefcase, Compass, MessageCircle, Route } from 'lucide-react';
 import type { Metadata } from 'next';
-import { pageSeo, seoKeywords } from '@/lib/seo';
+import { pageSeo, seoKeywords, alternatesFor } from '@/lib/seo';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
@@ -13,7 +13,7 @@ import { ArrowRight } from 'lucide-react';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const meta = pageSeo.services[locale] ?? pageSeo.services.en;
-  return { title: meta.title, description: meta.description, keywords: seoKeywords };
+  return { title: meta.title, description: meta.description, keywords: seoKeywords, alternates: alternatesFor(locale, '/services') };
 }
 
 export default async function ServicesPage({ params }: { params: Promise<{locale: string}> }) {

@@ -2,6 +2,18 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ShieldCheck, Award, HeartHandshake } from 'lucide-react';
 import Image from 'next/image';
 
+import type { Metadata } from 'next';
+import { alternatesFor, seoFor } from '@/lib/seo';
+
+const TITLES: Record<string, string> = {'en': 'About Mauritania Concierge | Travel & Business Services in Mauritania', 'fr': 'À propos de Mauritania Concierge | Voyage & affaires en Mauritanie', 'ar': 'من نحن | كونسيرج موريتانيا'};
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const description = seoFor(locale).description;
+  return { title: TITLES[locale] ?? TITLES.en, description, alternates: alternatesFor(locale, '/about') };
+}
+
+
 export default async function AboutPage({ params }: { params: Promise<{locale: string}> }) {
   const {locale} = await params;
   setRequestLocale(locale);

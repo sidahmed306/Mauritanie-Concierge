@@ -2,6 +2,19 @@ import { ContactForm } from '@/components/contact-form';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
+import type { Metadata } from 'next';
+import { alternatesFor, seoFor } from '@/lib/seo';
+
+const TITLES: Record<string, string> = {'en': 'Contact Mauritania Concierge | Airport Transfer & Tours in Nouakchott', 'fr': 'Contact Mauritania Concierge | Transfert aéroport & circuits à Nouakchott', 'ar': 'اتصل بنا | كونسيرج موريتانيا'};
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Contact' });
+  const description = t('pageSubtitle');
+  return { title: TITLES[locale] ?? TITLES.en, description, alternates: alternatesFor(locale, '/contact') };
+}
+
+
 export default async function ContactPage({ params }: { params: Promise<{locale: string}> }) {
   const {locale} = await params;
   setRequestLocale(locale);

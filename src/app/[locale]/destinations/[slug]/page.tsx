@@ -8,6 +8,7 @@ import { destinationsData, getDestination } from '@/lib/data/destinations';
 import { CONTACT_EMAIL, whatsappLink } from '@/lib/data/services';
 import { DestinationCard } from '@/components/destinations/destination-card';
 import { PhotoCredits } from '@/components/destinations/photo-credits';
+import { alternatesFor } from '@/lib/seo';
 
 type Params = { locale: string; slug: string };
 
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   return {
     title: `${t('name')} | Mauritania Concierge`,
     description: t('short'),
+    alternates: alternatesFor(locale, `/destinations/${slug}`),
     openGraph: {
       title: `${t('name')} | Mauritania Concierge`,
       description: t('short'),

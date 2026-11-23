@@ -1,6 +1,19 @@
 import { FAQAccordion } from '@/components/faq-accordion';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 
+import type { Metadata } from 'next';
+import { alternatesFor, seoFor } from '@/lib/seo';
+
+const TITLES: Record<string, string> = {'en': 'FAQ: Travelling to Mauritania | Mauritania Concierge', 'fr': 'FAQ : voyager en Mauritanie | Mauritania Concierge', 'ar': 'الأسئلة الشائعة | كونسيرج موريتانيا'};
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'FAQ' });
+  const description = t('pageSubtitle');
+  return { title: TITLES[locale] ?? TITLES.en, description, alternates: alternatesFor(locale, '/faq') };
+}
+
+
 export default async function FAQPage({ params }: { params: Promise<{locale: string}> }) {
   const {locale} = await params;
   setRequestLocale(locale);
